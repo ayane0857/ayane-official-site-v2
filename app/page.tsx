@@ -1,6 +1,6 @@
 import Image from "next/image";
-import ScrollingLogoNav from "../components/reciprocallink";
-import { FaArrowRightLong } from "react-icons/fa6";
+import ScrollingLogoNav from "@/components/reciprocallink";
+import { ServiceCard } from "@/components/ui/service-card";
 
 export default function Home() {
   return (
@@ -27,8 +27,38 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <section className="py-12 flex flex-col items-center justify-center">
-        <h2 className="text-2xl font-semibold">相互リンク</h2>
+      <section className="py-20 px-4 max-w-5xl mx-auto w-full">
+        <div className="flex flex-col items-center mb-12">
+          <h2 className="text-3xl font-bold tracking-tight">サービス</h2>
+          <p className="text-muted-foreground mt-2 text-center">
+            運営・制作しているサービス
+          </p>
+          <div className="h-1 w-12 bg-primary mt-4 rounded-full" />
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <ServiceCard
+            title="彩奏 彼方"
+            description="単独音で構成されたシンプルな音源。"
+            type="UTAU"
+            link="https://utau.ayane0857.net"
+          />
+          <ServiceCard
+            title="彩音のスライド公開所"
+            description="彩音がLTなどで使用したスライドを公開しています。"
+            type="Portfolio"
+            link="https://slides.ayane0857.net"
+          />
+        </div>
+      </section>
+      <section className="py-20 px-4 max-w-5xl mx-auto w-full flex flex-col items-center">
+        <div className="flex flex-col items-center mb-12">
+          <h2 className="text-3xl font-bold tracking-tight">相互リンク</h2>
+          <p className="text-muted-foreground mt-2 text-center">
+            古のサイトにありがちな相互なリンク達
+          </p>
+          <div className="h-1 w-12 bg-primary mt-4 rounded-full" />
+        </div>
         <ScrollingLogoNav />
       </section>
     </div>

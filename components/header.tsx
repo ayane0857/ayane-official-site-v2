@@ -1,4 +1,5 @@
-import { TbSparkles, TbHeart, TbHome, TbLicense, TbMail } from "react-icons/tb";
+import Link from "next/link";
+import { TbPencil, TbUser, TbHome, TbLicense, TbMail } from "react-icons/tb";
 
 export default function Header() {
   return (
@@ -7,28 +8,40 @@ export default function Header() {
         <nav>
           <ul className="flex space-x-8 font-bold text-gray-700">
             <li>
-              <a href="sponsor" className="hover:text-gray-900">
-                <TbHeart className="inline mb-1 mr-1 w-7 h-7" />
-              </a>
+              <Link
+                href="about"
+                className="hover:text-gray-900"
+                title="自己紹介"
+              >
+                <TbUser className="inline mb-1 mr-1 w-7 h-7" />
+              </Link>
             </li>
             <li>
-              <a href="contact" className="hover:text-gray-900">
+              <Link
+                href="contact"
+                className="hover:text-gray-900"
+                title="コンタクト"
+              >
                 <TbMail className="inline mb-1 mr-1 w-7 h-7" />
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="home" className="hover:text-gray-900">
+              <Link href="home" className="hover:text-gray-900" title="ホーム">
                 <TbHome className="inline mb-1 mr-1 w-7 h-7" />
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="license" className="hover:text-gray-900">
+              <Link
+                href="license"
+                className="hover:text-gray-900"
+                title="ライセンス"
+              >
                 <TbLicense className="inline mb-1 mr-1 w-7 h-7" />
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="share" className="hover:text-gray-900">
-                <TbSparkles className="inline mb-1 mr-1 w-7 h-7" />
+              <a className="hover:text-gray-900" title="作成中">
+                <TbPencil className="inline mb-1 mr-1 w-7 h-7" />
               </a>
             </li>
           </ul>
