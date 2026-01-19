@@ -8,6 +8,9 @@ import {
   SiFigma,
   SiGit,
   SiVercel,
+  SiPython,
+  SiKubernetes,
+  SiArgo,
 } from "react-icons/si";
 
 export default function Skill() {
@@ -22,6 +25,10 @@ export default function Skill() {
         {
           name: "JavaScript",
           icon: <SiJavascript className="text-[#F7DF1E]" />,
+        },
+        {
+          name: "Python",
+          icon: <SiPython className="text-[#3776AB]" />,
         },
       ],
     },
@@ -42,12 +49,17 @@ export default function Skill() {
         { name: "Git", icon: <SiGit className="text-[#F05032]" /> },
         { name: "Figma", icon: <SiFigma className="text-[#F24E1E]" /> },
         { name: "Vercel", icon: <SiVercel className="text-black" /> },
+        {
+          name: "Kubernetes",
+          icon: <SiKubernetes className="text-[#326CE5]" />,
+        },
+        { name: " Argo CD", icon: <SiArgo className="text-[#E23E4B]" /> },
       ],
     },
   ];
 
   return (
-    <main className="p-6 mx-auto min-h-screen bg-gray-50 flex items-center justify-center">
+    <main className="p-6 mx-auto min-h-screen flex items-center justify-center">
       <div className="bg-[#e8d6d0] rounded-[2rem] max-w-4xl w-full p-10 md:p-16 shadow-lg shadow-black/5 text-center">
         {/* ヘッダー */}
         <h2 className="text-3xl font-extrabold text-gray-800 tracking-tight">
