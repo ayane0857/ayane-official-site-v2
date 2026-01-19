@@ -1,6 +1,6 @@
 import { TbLink } from "react-icons/tb";
 
-export default function Home() {
+export default function License() {
   return (
     <main className="p-6 mx-auto min-h-screen flex items-center justify-center">
       <div className="bg-[#e8d6d0] rounded-[2rem] max-w-2xl w-full p-10 md:p-16 shadow-lg shadow-black/5 text-center">

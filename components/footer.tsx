@@ -9,8 +9,9 @@ import {
   TbLicense,
   TbMail,
   TbFlower,
-  TbUser,
 } from "react-icons/tb";
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="mt-16 pb-8">
@@ -53,34 +54,34 @@ export default function Footer() {
 
           {/* フッターナビゲーション */}
           <div className="flex justify-center space-x-8 mb-6 text-sm font-semibold text-gray-600">
-            <a
+            <Link
               href="#"
               className="hover:text-gray-800 flex items-center space-x-1"
             >
               <TbHome className="w-4 h-4" />
               <span>Home</span>
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="hover:text-gray-800 flex items-center space-x-1"
             >
               <TbMail className="w-4 h-4" />
               <span>Contact</span>
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="hover:text-gray-800 flex items-center space-x-1"
             >
               <TbLicense className="w-4 h-4" />
               <span>License</span>
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="hover:text-gray-800 flex items-center space-x-1"
             >
-              <TbUser className="w-4 h-4" />
-              <span>About</span>
-            </a>
+              <TbStar className="w-4 h-4" />
+              <span>Skill</span>
+            </Link>
           </div>
 
           <div className="text-center text-gray-600 text-sm">

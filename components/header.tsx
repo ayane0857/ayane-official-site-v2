@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { TbPencil, TbUser, TbHome, TbLicense, TbMail } from "react-icons/tb";
+import { TbPencil, TbStar, TbHome, TbLicense, TbMail } from "react-icons/tb";
 
 export default function Header() {
   return (
@@ -8,12 +8,8 @@ export default function Header() {
         <nav>
           <ul className="flex space-x-8 font-bold text-gray-700">
             <li>
-              <Link
-                href="about"
-                className="hover:text-gray-900"
-                title="自己紹介"
-              >
-                <TbUser className="inline mb-1 mr-1 w-7 h-7" />
+              <Link href="skill" className="hover:text-gray-900" title="スキル">
+                <TbStar className="inline mb-1 mr-1 w-7 h-7" />
               </Link>
             </li>
             <li>
@@ -26,7 +22,7 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href="home" className="hover:text-gray-900" title="ホーム">
+              <Link href="/" className="hover:text-gray-900" title="ホーム">
                 <TbHome className="inline mb-1 mr-1 w-7 h-7" />
               </Link>
             </li>
