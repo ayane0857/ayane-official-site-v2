@@ -1,6 +1,20 @@
+import { Metadata } from "next";
 import Image from "next/image";
 import ScrollingLogoNav from "@/components/reciprocallink";
 import { ServiceCard } from "@/components/ui/service-card";
+import { TbBrandGithub, TbBrandTwitter, TbBrandYoutube } from "react-icons/tb";
+
+export const metadata: Metadata = {
+  title: "メインページ",
+  openGraph: {
+    title: "メインページ",
+    description: "彩音のサイトのトップページです！",
+  },
+  twitter: {
+    title: "メインページ",
+    description: "彩音のサイトのトップページです！",
+  },
+};
 
 export default function Home() {
   return (
@@ -15,6 +29,33 @@ export default function Home() {
         楽しそうなことはなんでもやるが理解はできていない模様
         よわよわエンジニアなので手加減をしてほしいです`}
             </p>
+
+            <div className="flex gap-4 mt-6 justify-center md:justify-start">
+              <a
+                href="https://github.com/あなたのユーザー名"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-black transition-colors"
+              >
+                <TbBrandGithub size={28} />
+              </a>
+              <a
+                href="https://twitter.com/あなたのユーザー名"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-blue-400 transition-colors"
+              >
+                <TbBrandTwitter size={28} />
+              </a>
+              <a
+                href="https://www.youtube.com/@ayane0857"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-red-600 transition-colors"
+              >
+                <TbBrandYoutube size={28} />
+              </a>
+            </div>
           </div>
 
           <div className="flex justify-center w-full max-w-[240px] md:max-w-none">

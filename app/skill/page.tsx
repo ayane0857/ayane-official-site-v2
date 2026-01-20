@@ -1,4 +1,5 @@
 import React from "react";
+import type { Metadata } from "next";
 import {
   SiTypescript,
   SiJavascript,
@@ -12,6 +13,18 @@ import {
   SiKubernetes,
   SiArgo,
 } from "react-icons/si";
+
+export const metadata: Metadata = {
+  title: "スキル一覧",
+  openGraph: {
+    title: "スキル一覧",
+    description: "彩音のスキル一覧です！",
+  },
+  twitter: {
+    title: "スキル一覧",
+    description: "彩音のスキル一覧です！",
+  },
+};
 
 export default function Skill() {
   const skillCategories = [

@@ -1,4 +1,17 @@
+import type { Metadata } from "next";
 import { TbLink } from "react-icons/tb";
+
+export const metadata: Metadata = {
+  title: "ライセンス",
+  openGraph: {
+    title: "ライセンス",
+    description: "彩音に関するライセンスを記載しています",
+  },
+  twitter: {
+    title: "ライセンス",
+    description: "彩音に関するライセンスを記載しています",
+  },
+};
 
 export default function License() {
   return (

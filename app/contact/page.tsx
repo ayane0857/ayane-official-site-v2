@@ -1,5 +1,17 @@
-import React from "react";
+import type { Metadata } from "next";
 import { TbMail, TbBrandTwitter } from "react-icons/tb";
+
+export const metadata: Metadata = {
+  title: "お問い合わせ",
+  openGraph: {
+    title: "お問い合わせ",
+    description: "お問い合わせページです",
+  },
+  twitter: {
+    title: "お問い合わせ",
+    description: "お問い合わせページです",
+  },
+};
 
 export default function About() {
   return (
