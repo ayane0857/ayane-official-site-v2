@@ -5,24 +5,26 @@ import { ServiceCard } from "@/components/ui/service-card";
 export default function Home() {
   return (
     <div className="gap-6">
-      <main className="py-12 flex justify-center min-h-screen">
-        <div className="flex w-full max-w-6xl items-center justify-center gap-16 px-6">
-          <div>
-            <h2 className="text-4xl font-bold mb-4">彩音</h2>
-            <p className="text-gray-600 leading-relaxed w-80 whitespace-pre-line">
+      <main className="py-12 flex justify-center min-h-screen items-center">
+        <div className="flex flex-col-reverse md:flex-row w-full max-w-6xl items-center justify-center gap-8 md:gap-16 px-6">
+          <div className="text-center md:text-left">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">彩音</h2>
+            <p className="text-gray-600 text-sm md:text-base leading-relaxed w-full max-w-xs md:w-80 whitespace-pre-line mx-auto md:mx-0">
               {`2010年製の学生エンジニアもどき
-              さまざまなことに手を付け始めてる愚か者
-              楽しそうなことはなんでもやるが理解はできていない模様
-              よわよわエンジニアなので手加減をしてほしいです`}
+        さまざまなことに手を付け始めてる愚か者
+        楽しそうなことはなんでもやるが理解はできていない模様
+        よわよわエンジニアなので手加減をしてほしいです`}
             </p>
           </div>
-          <div className="flex justify-center">
+
+          <div className="flex justify-center w-full max-w-[240px] md:max-w-none">
             <Image
               src="/ayane-toushin.png"
               alt="彩音の等身大画像"
               width={357}
               height={500}
-              className="max-h-[500px] object-contain"
+              priority
+              className="w-full h-auto max-h-[400px] md:max-h-[500px] object-contain"
             />
           </div>
         </div>
