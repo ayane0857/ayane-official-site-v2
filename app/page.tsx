@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="gap-6">
-      <main className="py-12 flex justify-center min-h-screen items-center">
+      <main className="pt-24 pb-12 flex justify-center min-h-screen items-center">
         <div className="flex flex-col-reverse md:flex-row w-full max-w-6xl items-center justify-center gap-8 md:gap-16 px-6">
           <div className="text-center md:text-left">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">彩音</h2>
@@ -61,14 +61,13 @@ export default function Home() {
               </a>
             </div>
           </div>
-
-          <div className="flex justify-center w-full max-w-[240px] md:max-w-none">
+          <div className="relative flex justify-center w-full max-w-[240px] md:max-w-none h-[400px] md:h-[500px]">
             <Image
               src="/ayane-toushin.png"
               alt="彩音の等身大画像"
               fill
               priority
-              className="w-full h-auto max-h-[400px] md:max-h-[500px] object-contain"
+              className="object-contain"
             />
           </div>
         </div>
