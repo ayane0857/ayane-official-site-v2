@@ -31,7 +31,7 @@ export default function Home() {
         よわよわエンジニアなので手加減をしてほしいです`}
             </p>
 
-            <div className="flex gap-4 mt-6 justify-center md:justify-start">
+            <div className="flex gap-4 mt-6 items-center justify-center md:justify-start">
               <a
                 href="https://github.com/@ayane0857"
                 target="_blank"
