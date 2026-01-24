@@ -30,7 +30,7 @@ export default function LinkScroller() {
             </a>
           ))}
         </div>
-        <div className="scroll-list" aria-hidden="true">
+        <div className="scroll-list">
           {links.map((link, index) => (
             <a
               key={index}

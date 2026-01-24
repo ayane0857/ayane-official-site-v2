@@ -6,6 +6,7 @@ import { TbBrandGithub, TbBrandTwitter, TbBrandYoutube } from "react-icons/tb";
 
 export const metadata: Metadata = {
   title: "メインページ",
+  description: "彩音のメインページ",
   openGraph: {
     title: "メインページ",
     description: "彩音のサイトのトップページです！",
@@ -32,17 +33,19 @@ export default function Home() {
 
             <div className="flex gap-4 mt-6 justify-center md:justify-start">
               <a
-                href="https://github.com/あなたのユーザー名"
+                href="https://github.com/@ayane0857"
                 target="_blank"
                 rel="noopener noreferrer"
+                title="GitHub"
                 className="text-gray-600 hover:text-black transition-colors"
               >
                 <TbBrandGithub size={28} />
               </a>
               <a
-                href="https://twitter.com/あなたのユーザー名"
+                href="https://x.com/ayane0857_"
                 target="_blank"
                 rel="noopener noreferrer"
+                title="Twitter(X)"
                 className="text-gray-600 hover:text-blue-400 transition-colors"
               >
                 <TbBrandTwitter size={28} />
@@ -51,6 +54,7 @@ export default function Home() {
                 href="https://www.youtube.com/@ayane0857"
                 target="_blank"
                 rel="noopener noreferrer"
+                title="YouTube"
                 className="text-gray-600 hover:text-red-600 transition-colors"
               >
                 <TbBrandYoutube size={28} />
@@ -62,8 +66,7 @@ export default function Home() {
             <Image
               src="/ayane-toushin.png"
               alt="彩音の等身大画像"
-              width={357}
-              height={500}
+              fill
               priority
               className="w-full h-auto max-h-[400px] md:max-h-[500px] object-contain"
             />
