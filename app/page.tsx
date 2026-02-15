@@ -5,7 +5,7 @@ import { ServiceCard } from "@/components/ui/service-card";
 import { TbBrandGithub, TbBrandTwitter, TbBrandYoutube } from "react-icons/tb";
 
 export const metadata: Metadata = {
-  title: "メインページ",
+  title: "メインページ | 彩音のサイト",
   description: "彩音のメインページ",
   openGraph: {
     title: "メインページ",
@@ -72,7 +72,7 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <section className="py-20 px-4 max-w-5xl mx-auto w-full">
+      <section className="py-20 px-4 max-w-5xl mx-auto w-full fade-in">
         <div className="flex flex-col items-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight">サービス</h2>
           <p className="text-muted-foreground mt-2 text-center">
@@ -96,7 +96,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="py-20 px-4 max-w-5xl mx-auto w-full flex flex-col items-center">
+      <section className="py-20 px-4 max-w-5xl mx-auto w-full flex flex-col items-center fade-in">
         <div className="flex flex-col items-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight">相互リンク</h2>
           <p className="text-muted-foreground mt-2 text-center">

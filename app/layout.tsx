@@ -2,6 +2,7 @@ import { Viewport, Metadata } from "next";
 import { Zen_Kaku_Gothic_New } from "next/font/google";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import FadeInObserver from "@/components/fade-in-observer";
 import "./globals.css";
 
 const KakuGothicNew = Zen_Kaku_Gothic_New({
@@ -17,7 +18,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "メインページ - 彩音のサイト",
+    default: "メインページ | 彩音のサイト",
     template: "%s | 彩音のサイト",
   },
   twitter: {
@@ -57,6 +58,7 @@ export default function RootLayout({
       <body className={`${KakuGothicNew.className} antialiased`}>
         <Header />
         {children}
+        <FadeInObserver />
         <Footer />
       </body>
     </html>
