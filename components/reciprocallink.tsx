@@ -11,6 +11,7 @@ const links = [
   { name: "256server", url: "https://256server.com/" },
   { name: "しひろ", url: "https://shihiro.com/" },
   { name: "風止渚", url: "https://kzng.f5.si/"}
+  { name: "ゆー", url: "https://drsb.f5.si/"}
 ];
 
 export default function LinkScroller() {
