@@ -29,8 +29,7 @@ const utauWorks = [
     Source: "馳音ヤタ",
     description:
       "初めてのUTAUカバー作品です！UTAUについてあまり知らない状態から一日で作りました。",
-    youtubeUrl: "",
-    otherUrl: "https://utaloader.net/music/20251012171037191623",
+    url: "https://utaloader.net/music/20251012171037191623",
     date: "2025.10.13",
   },
   {
@@ -38,16 +37,14 @@ const utauWorks = [
     Source: "謎",
     description:
       "二日目の作品（二作品目）です。今回はできるだけ自分だけで作ってみました",
-    youtubeUrl: "",
-    otherUrl: "https://utaloader.net/music/20251013044059705603",
+    url: "https://utaloader.net/music/20251013044059705603",
     date: "2025.10.13",
   },
   {
     title: "ひつじがいっぴき",
     Source: "馳音ユト",
     description: "別の人にMIX教えてもらいました。",
-    youtubeUrl: "",
-    otherUrl: "https://utaloader.net/music/20251025171825824177",
+    url: "https://utaloader.net/music/20251025171825824177",
     date: "2025.10.26",
   },
 ];
@@ -118,15 +115,15 @@ export default function Works() {
                     {work.description}
                   </p>
                   <div className="flex flex-wrap gap-3 mt-auto">
-                    {work.youtubeUrl && (
+                    {work.url && (
                       <a
-                        href={work.youtubeUrl}
+                        href={work.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 bg-red-50 hover:bg-red-100 text-red-600 px-4 py-2 rounded-xl text-sm font-medium transition-colors"
+                        className="flex items-center gap-2 bg-blue-50 hover:bg-blue-100 text-blue-600 px-4 py-2 rounded-xl text-sm font-medium transition-colors"
                       >
                         <TbBrandYoutube size={18} />
-                        YouTube
+                        utaloader
                       </a>
                     )}
                   </div>
