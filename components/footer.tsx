@@ -63,32 +63,39 @@ export default function Footer() {
           {/* フッターナビゲーション - flex-wrapで折り返しに対応 */}
           <div className="flex flex-wrap justify-center gap-y-4 gap-x-6 md:gap-x-10 mb-8 text-sm font-semibold text-gray-600">
             <Link
-              href="#"
+              href="/"
               className="hover:text-gray-800 flex items-center space-x-1 whitespace-nowrap"
             >
               <TbHome className="w-4 h-4" />
               <span>Home</span>
             </Link>
             <Link
-              href="#"
+              href="/contact"
               className="hover:text-gray-800 flex items-center space-x-1 whitespace-nowrap"
             >
               <TbMail className="w-4 h-4" />
               <span>Contact</span>
             </Link>
             <Link
-              href="#"
+              href="/license"
               className="hover:text-gray-800 flex items-center space-x-1 whitespace-nowrap"
             >
               <TbLicense className="w-4 h-4" />
               <span>License</span>
             </Link>
             <Link
-              href="#"
+              href="/skills"
               className="hover:text-gray-800 flex items-center space-x-1 whitespace-nowrap"
             >
               <TbStar className="w-4 h-4" />
               <span>Skill</span>
+            </Link>
+            <Link
+              href="/works"
+              className="hover:text-gray-800 flex items-center space-x-1 whitespace-nowrap"
+            >
+              <TbSparkles className="w-4 h-4" />
+              <span className="hover:text-gray-800">works</span>
             </Link>
           </div>
 

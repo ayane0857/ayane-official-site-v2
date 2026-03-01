@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { TbPencil, TbStar, TbHome, TbLicense, TbMail } from "react-icons/tb";
+import { TbSparkles, TbStar, TbHome, TbLicense, TbMail } from "react-icons/tb";
 
 export default function Header() {
   return (
@@ -36,9 +36,9 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <a className="hover:text-gray-900" title="作成中">
-                <TbPencil className="inline mb-1 mr-1 w-7 h-7" />
-              </a>
+              <Link href="works" className="hover:text-gray-900" title="制作物">
+                <TbSparkles className="inline mb-1 mr-1 w-7 h-7" />
+              </Link>
             </li>
           </ul>
         </nav>
