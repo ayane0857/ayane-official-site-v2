@@ -3,6 +3,7 @@ import { Zen_Kaku_Gothic_New } from "next/font/google";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import FadeInObserver from "@/components/fade-in-observer";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
 const KakuGothicNew = Zen_Kaku_Gothic_New({
@@ -55,6 +56,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
+      <head>
+        <GoogleAnalytics gaId="G-XN8KR4DZ8E" />
+      </head>
       <body className={`${KakuGothicNew.className} antialiased`}>
         <Header />
         {children}
