@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { TbLink } from "react-icons/tb";
+import { TbLink, TbPalette, TbCheck } from "react-icons/tb";
 
 export const metadata: Metadata = {
   title: "ライセンス",
@@ -34,6 +34,33 @@ export default function License() {
             </span>
             に基づいて提供されています。
           </p>
+
+          <h3 className="mt-8 text-lg font-semibold text-gray-800">
+            クリエイタークレジット
+          </h3>
+          <div className="mt-4 space-y-3">
+            <div className="flex items-center gap-3 p-3 bg-white/70 rounded-lg border border-gray-200/30 hover:bg-white/80 transition-colors">
+
+              <div>              <TbPalette className="h-5 w-5 text-gray-600 flex-shrink-0" />
+              <div className="text-gray-700 text-sm md:text-base">
+                <span className="font-semibold text-gray-800">さ</span>
+                ：イラスト制作
+              </div></div>
+              <div><TbPalette className="h-5 w-5 text-gray-600 flex-shrink-0" />
+              <div className="text-gray-700 text-sm md:text-base">
+                <span className="font-semibold text-gray-800">ユネ</span>
+                ：イラスト制作
+              </div></div>
+              
+            </div>
+            <div className="flex items-center gap-3 p-3 bg-white/70 rounded-lg border border-gray-200/30 hover:bg-white/80 transition-colors">
+              <TbCheck className="h-5 w-5 text-gray-600 flex-shrink-0" />
+              <div className="text-gray-700 text-sm md:text-base">
+                <span className="font-semibold text-gray-800">しひろ</span>
+                ：書類チェック
+              </div>
+            </div>
+          </div>
 
           <div className="mt-8 pt-6 border-t border-gray-200/50">
             <a
