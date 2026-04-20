@@ -39,19 +39,14 @@ export default function License() {
             クリエイタークレジット
           </h3>
           <div className="mt-4 space-y-3">
-            <div className="flex items-center gap-3 p-3 bg-white/70 rounded-lg border border-gray-200/30 hover:bg-white/80 transition-colors">
-
-              <div>              <TbPalette className="h-5 w-5 text-gray-600 flex-shrink-0" />
-              <div className="text-gray-700 text-sm md:text-base">
-                <span className="font-semibold text-gray-800">さ</span>
-                ：イラスト制作
-              </div></div>
-              <div><TbPalette className="h-5 w-5 text-gray-600 flex-shrink-0" />
-              <div className="text-gray-700 text-sm md:text-base">
-                <span className="font-semibold text-gray-800">ユネ</span>
-                ：イラスト制作
-              </div></div>
-              
+            <div className="flex gap-3 p-3 bg-white/70 rounded-lg border border-gray-200/30 hover:bg-white/80 transition-colors">
+              <TbPalette className="h-5 w-5 text-gray-600 flex-shrink-0" />
+              <ul className="text-gray-700 text-sm md:text-base">
+                <li><span className="font-semibold text-gray-800">さ</span>
+                ：イラスト制作</li>
+                <li><span className="font-semibold text-gray-800">ユネ</span>
+                ：イラスト制作</li>
+              </ul>
             </div>
             <div className="flex items-center gap-3 p-3 bg-white/70 rounded-lg border border-gray-200/30 hover:bg-white/80 transition-colors">
               <TbCheck className="h-5 w-5 text-gray-600 flex-shrink-0" />
