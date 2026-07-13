@@ -13,6 +13,7 @@ const links = [
   { name: "風止渚", url: "https://kzng.f5.si/" },
   { name: "ゆー", url: "https://drsb.f5.si/" },
   { name: "soichi", url: "https://soichi-portfolio.soichi1208.workers.dev/" },
+  { name: "一樹", url: "https://l-ituki8000.f5.si/" },
 ];
 
 export default function LinkScroller() {
