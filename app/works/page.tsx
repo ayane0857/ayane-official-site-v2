@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import type { Metadata } from "next";
 import {
   TbBrandYoutube,
@@ -6,6 +7,7 @@ import {
   TbMusic,
   TbCode,
   TbExternalLink,
+  TbPalette,
 } from "react-icons/tb";
 
 export const metadata: Metadata = {
@@ -76,6 +78,26 @@ const devWorks = [
   },
 ];
 
+const artWorks = [
+  {
+    title: "ヘッダー",
+    description:
+      "彩音のサイトのヘッダー画像です。サイトの雰囲気に合わせて制作しました。",
+    imageSrc: "/artworks/header.png",
+    date: "2026-07-13",
+    links: [
+      {
+        label: "ヘッダー",
+        url: "/artworks/header.png",
+      },
+      {
+        label: "バナー",
+        url: "/artworks/banner.png",
+      },
+    ],
+  },
+];
+
 export default function Works() {
   return (
     <main className="p-6 mx-auto min-h-screen flex items-center justify-center py-24">
@@ -96,7 +118,7 @@ export default function Works() {
               <h3 className="text-xl font-bold text-gray-700">UTAU Covers</h3>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {utauWorks.map((work, idx) => (
                 <div
                   key={idx}
@@ -139,7 +161,7 @@ export default function Works() {
               <h3 className="text-xl font-bold text-gray-700">Development</h3>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {devWorks.map((work, idx) => (
                 <div
                   key={idx}
@@ -191,6 +213,58 @@ export default function Works() {
                         Website
                       </a>
                     )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+          {/* アート作品 セクション */}
+          <section>
+            <div className="flex items-center gap-3 mb-6 ml-2 border-l-4 border-white/50 pl-3">
+              <TbPalette className="text-gray-700" size={24} />
+              <h3 className="text-xl font-bold text-gray-700">Art Works</h3>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {artWorks.map((artWork, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col bg-white/50 p-6 rounded-2xl hover:bg-white transition-all duration-300 shadow-sm group"
+                >
+                  {/* 画像 */}
+                  <Image
+                    src={artWork.imageSrc}
+                    alt={artWork.title}
+                    className="w-full rounded-xl mb-4 object-cover"
+                    width={500}
+                    height={300}
+                  />
+
+                  <span className="text-xs font-bold text-gray-400 tracking-widest mb-2 block">
+                    {artWork.date}
+                  </span>
+
+                  <h4 className="text-xl font-bold text-gray-800 mb-3">
+                    {artWork.title}
+                  </h4>
+
+                  <p className="text-sm text-gray-600 leading-relaxed mb-6 flex-grow">
+                    {artWork.description}
+                  </p>
+
+                  <div className="flex flex-wrap gap-3 mt-auto">
+                    {artWork.links.map((link) => (
+                      <a
+                        key={link.url}
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-xl text-sm font-medium transition-colors"
+                      >
+                        <TbExternalLink size={18} />
+                        {link.label}
+                      </a>
+                    ))}
                   </div>
                 </div>
               ))}
