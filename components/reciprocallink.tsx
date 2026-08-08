@@ -14,6 +14,7 @@ const links = [
   { name: "ゆー", url: "https://drsb.f5.si/" },
   { name: "soichi", url: "https://soichi-portfolio.soichi1208.workers.dev/" },
   { name: "一樹", url: "https://l-ituki8000.f5.si/" },
+  { name: "ななしぃ", url: "https://nanasi-rasi.net/" },
 ];
 
 export default function LinkScroller() {
