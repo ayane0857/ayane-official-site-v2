@@ -74,7 +74,7 @@ export default function Home() {
       </main>
       <section className="py-20 px-4 max-w-5xl mx-auto w-full fade-in">
         <div className="flex flex-col items-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tight">サービス</h2>
+          <h2 className="text-3xl font-bold tracking-tight">制作物</h2>
           <p className="text-muted-foreground mt-2 text-center">
             運営・制作しているサービス
           </p>
@@ -89,10 +89,22 @@ export default function Home() {
             link="https://utau.ayane0857.net"
           />
           <ServiceCard
-            title="彩音のスライド公開所"
-            description="彩音がLTなどで使用したスライドを公開しています。"
-            type="Portfolio"
-            link="https://slides.ayane0857.net"
+            title="彩音のサイト"
+            description="プロフィールや活動内容をまとめた公式サイト。"
+            type="Web"
+            link="https://ayane0857.net"
+          />
+          <ServiceCard
+            title="新しい技術をいっぱい触っておもったこと"
+            description="UniProject 2025 LT大会 冬の陣で発表したスライド。"
+            type="Slide"
+            link="https://file.ayane0857.net/lt/many-new-technology.pdf"
+          />
+          <ServiceCard
+            title="支払い履歴を閲覧できるAPIを作ってみた"
+            description="UniProject 2025 LT大会 夏の陣で発表したスライド。"
+            type="Slide"
+            link="https://file.ayane0857.net/lt/create-open-balance.pdf"
           />
         </div>
       </section>

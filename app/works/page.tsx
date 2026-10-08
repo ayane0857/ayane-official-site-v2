@@ -8,6 +8,7 @@ import {
   TbCode,
   TbExternalLink,
   TbPalette,
+  TbDeviceDesktop,
 } from "react-icons/tb";
 
 export const metadata: Metadata = {
@@ -68,13 +69,22 @@ const devWorks = [
     siteUrl: "https://utau.ayane0857.net",
     date: "2025.01.29",
   },
+];
+
+const slideWorks = [
   {
-    title: "彩音のスライド公開所",
-    description: "彩音がLTなどで使用したスライドを公開しています。",
-    techStack: ["Next.js"],
-    githubUrl: "https://github.com/ayane0857/slides",
-    siteUrl: "https://slide.ayane0857.net",
-    date: "2025.01.29",
+    title: "新しい技術をいっぱい触っておもったこと",
+    description: "UniProject 2025 LT大会 冬の陣",
+    imageSrc: "/slides/new-technology.png",
+    url: "https://file.ayane0857.net/lt/many-new-technology.pdf",
+    date: "2025.12.27",
+  },
+  {
+    title: "支払い履歴を閲覧できるAPIを作ってみた",
+    description: "UniProject 2025 LT大会 夏の陣",
+    imageSrc: "/slides/open-balance-api.png",
+    url: "https://file.ayane0857.net/lt/create-open-balance.pdf",
+    date: "2025.10.05",
   },
 ];
 
@@ -218,6 +228,51 @@ export default function Works() {
               ))}
             </div>
           </section>
+          {/* アート作品 セクション */}
+          <section>
+            <div className="flex items-center gap-3 mb-6 ml-2 border-l-4 border-white/50 pl-3">
+              <TbDeviceDesktop className="text-gray-700" size={24} />
+              <h3 className="text-xl font-bold text-gray-700">Slides</h3>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {slideWorks.map((work) => (
+                <div
+                  key={work.url}
+                  className="flex flex-col bg-white/50 p-6 rounded-2xl hover:bg-white transition-all duration-300 shadow-sm group"
+                >
+                  <Image
+                    src={work.imageSrc}
+                    alt={work.title}
+                    className="w-full rounded-xl mb-4 object-cover"
+                    width={640}
+                    height={360}
+                  />
+                  <span className="text-xs font-bold text-gray-400 tracking-widest mb-2 block">
+                    {work.date}
+                  </span>
+                  <h4 className="text-xl font-bold text-gray-800 mb-3">
+                    {work.title}
+                  </h4>
+                  <p className="text-sm text-gray-600 leading-relaxed mb-6 flex-grow">
+                    {work.description}
+                  </p>
+                  <div className="flex flex-wrap gap-3 mt-auto">
+                    <a
+                      href={work.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-xl text-sm font-medium transition-colors"
+                    >
+                      <TbExternalLink size={18} />
+                      スライド
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
           {/* アート作品 セクション */}
           <section>
             <div className="flex items-center gap-3 mb-6 ml-2 border-l-4 border-white/50 pl-3">
