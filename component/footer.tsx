@@ -59,7 +59,7 @@ export default function Footer() {
       </div>
 
       <div className="flex items-center gap-12 border-t border-[#CFCFCF] pt-10 text-base">
-        <p>© {CopyrightYear()} Ayane</p>
+        <p>© <CopyrightYear /> Ayane</p>
       </div>
     </footer>
   );
