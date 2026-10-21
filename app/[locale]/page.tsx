@@ -11,7 +11,6 @@ export default function Home() {
   const t = useTranslations("Home");
   return (
     <div className="flex flex-col gap-16">
-      <Header />
       <section className="flex items-center justify-center gap-8 px-8 py-4">
         <div className="w-full max-w-[300px] md:w-1/3 md:max-w-none shrink-0">
           <Image
@@ -61,7 +60,6 @@ export default function Home() {
         <p className="text-5xl font-medium">Socials</p>
         <Socials />
       </section>
-      <Footer />
     </div>
   );
 }
