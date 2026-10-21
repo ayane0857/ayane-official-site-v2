@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import { projects } from "@/data/Portfolio"; // 実際のパスに合わせてください
+import { projects } from "@/data/Portfolio";
 import ProjectCard from "@/component/portfoliocard";
 
 export default function Portfolio() {
@@ -10,15 +10,18 @@ export default function Portfolio() {
   );
 
   return (
-    <main className="flex flex-col gap-16">
-      <header className="flex flex-col gap-4 px-16 py-4">
+    <div>
+      <div className="flex flex-col gap-4 px-5 py-4 sm:px-8 lg:px-16">
         <h1 className="text-6xl font-bold">Portfolio</h1>
         <p className="max-w-2xl whitespace-pre-line text-xl text-[#545454]">
           {t("TitleText")}
         </p>
-      </header>
+      </div>
 
-      <section className="grid grid-cols-1 gap-8 px-16 pb-16 sm:grid-cols-2 lg:grid-cols-4">
+      <section
+        aria-label={t("TitleText")}
+        className="grid grid-cols-1 gap-6 px-5 pb-16 sm:grid-cols-2 sm:px-8 lg:grid-cols-3 lg:gap-8 lg:px-16"
+      >
         {sorted.map((project) => (
           <ProjectCard
             key={project.id}
@@ -28,6 +31,6 @@ export default function Portfolio() {
           />
         ))}
       </section>
-    </main>
+    </div>
   );
 }

@@ -15,10 +15,12 @@
         "TitleText": "私が作ってきた制作物たち",
         "View": "見る",
         "0": {
-            "title": "ayane-home"
+            "title": "ayane.home",
+            "description": "Next.jsとTypeScriptで作ったポートフォリオサイトです。"
         },
         "1": {
-            "title": "React Project"
+            "title": "React Project",
+            "description": "Reactで作ったプロジェクトです。"
         }
     }
 }
