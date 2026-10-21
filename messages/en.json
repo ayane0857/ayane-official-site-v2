@@ -12,13 +12,15 @@
         "IntroText": "I'm currently a 16-year-old high school engineer.\nI want to take my time and relax.\nI'm trying to do a lot of things other than programming.\nI'm a timid person, so I want people to treat me kindly.\nI don't have many opportunities to program these days, which is scary."
     },
     "Portfolio": {
-        "TitleText": "Projects I've created",
+        "TitleText": "Productions I've Made",
         "View": "View",
         "0": {
-            "title": "ayane-home"
+            "title": "ayane.home",
+            "description": "This is a portfolio site created using Next.js and TypeScript."
         },
         "1": {
-            "title": "React Project"
+            "title": "React Project",
+            "description": "This is a project made with React."
         }
     }
 }
