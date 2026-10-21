@@ -45,7 +45,7 @@ export default function Home() {
       </section>
       <section className="px-16 gap-6 flex flex-col">
         <div className="flex items-center justify-between">
-          <p className="text-5xl font-medium">Portfolio</p>
+          <p className="text-4xl font-semibold">Portfolio</p>
           <Link
             href="/portfolio"
             className="flex items-center gap-2 text-[#545454] cursor-pointer"
@@ -57,7 +57,7 @@ export default function Home() {
         <PortfolioSlider />
       </section>
       <section className="px-16 gap-6 flex flex-col">
-        <p className="text-5xl font-medium">Socials</p>
+        <p className="text-4xl font-semibold">Socials</p>
         <Socials />
       </section>
     </div>
