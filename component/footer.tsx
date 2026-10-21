@@ -1,9 +1,12 @@
-"use client";
-
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 
 const linkClass = "text-lg text-[#222] underline-offset-2 hover:underline";
+
+export async function CopyrightYear() {
+  "use cache";
+  return <>{new Date().getFullYear()}</>;
+}
 
 export default function Footer() {
   const t = useTranslations("Footer");
@@ -56,7 +59,7 @@ export default function Footer() {
       </div>
 
       <div className="flex items-center gap-12 border-t border-[#CFCFCF] pt-10 text-base">
-        <p>© {new Date().getFullYear()} Ayane</p>
+        <p>© {CopyrightYear()} Ayane</p>
       </div>
     </footer>
   );

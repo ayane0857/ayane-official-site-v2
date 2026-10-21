@@ -31,7 +31,7 @@ const socials: Social[] = [
   {
     name: "Twitter",
     handle: "@ayane0857_",
-    href: "https://twitter.com/ayane0857_",
+    href: "https://x.com/ayane0857_",
     size: "large",
     icon: <FiTwitter className={iconClass} />,
   },
