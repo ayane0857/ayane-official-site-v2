@@ -25,7 +25,7 @@ async function PortfolioContent({
 
       <div className="flex flex-col items-start justify-between gap-10 px-5 py-10 sm:flex-row sm:items-center sm:gap-8 sm:px-8 lg:px-16">
         <div className="max-w-xl shrink-0">
-          <h1 className="text-5xl font-bold tracking-tight text-black sm:text-6xl">
+          <h1 className="text-4xl font-bold tracking-tight text-black sm:text-6xl">
             {t(`${id}.title`)}
           </h1>
           <p className="mt-4 max-w-md whitespace-pre-line text-lg leading-relaxed text-[#545454] sm:text-xl">

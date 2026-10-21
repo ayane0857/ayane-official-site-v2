@@ -12,7 +12,7 @@ export default function Footer() {
   const t = useTranslations("Footer");
 
   return (
-    <footer className="flex w-full flex-col gap-12 px-8 pt-24 pb-12 text-[#545454]">
+    <footer className="flex w-full flex-col gap-12 px-4 pt-16 pb-10 text-[#545454] sm:px-8 sm:pt-24 sm:pb-12">
       <div className="flex flex-col justify-between gap-10 md:flex-row">
         <div>
           <Link href="/" className="text-4xl font-medium">
@@ -23,7 +23,7 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="flex gap-16 md:gap-24">
+        <div className="flex gap-12 sm:gap-16 md:gap-24">
           <nav className="flex flex-col gap-4">
             <p className="text-sm text-[#545454]">Pages</p>
             <ul className="flex flex-col gap-4">

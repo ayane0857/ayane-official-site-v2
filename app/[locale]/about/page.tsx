@@ -35,22 +35,22 @@ export default function About() {
   const t = useTranslations("About");
   return (
     <main className="flex flex-col gap-16">
-      <header className="flex flex-col gap-4 px-16 py-4">
-        <h1 className="text-6xl font-bold">About</h1>
-        <p className="max-w-2xl whitespace-pre-line text-xl text-[#545454]">
+      <header className="flex flex-col gap-4 px-4 py-4 sm:px-8 lg:px-16">
+        <h1 className="text-5xl font-bold sm:text-6xl">About</h1>
+        <p className="max-w-2xl whitespace-pre-line text-lg text-[#545454] sm:text-xl">
           {t("AboutText")}
         </p>
       </header>
 
       <section
         aria-labelledby="profile-heading"
-        className="grid items-center gap-8 px-16 py-4 md:grid-cols-2"
+        className="grid items-center gap-8 px-4 py-4 sm:px-8 md:grid-cols-2 lg:px-16"
       >
         <div className="flex flex-col gap-6">
-          <h2 id="profile-heading" className="text-4xl font-semibold">
+          <h2 id="profile-heading" className="text-3xl font-semibold sm:text-4xl">
             {t("IntroTitle")}
           </h2>
-          <p className="max-w-xl whitespace-pre-line text-xl leading-8 text-[#545454]">
+          <p className="max-w-xl whitespace-pre-line text-lg leading-8 text-[#545454] sm:text-xl">
             {t("IntroText")}
           </p>
         </div>
@@ -85,8 +85,8 @@ export default function About() {
         </div>
       </section>
 
-      <section className="flex flex-col gap-6 px-16">
-        <h2 className="text-4xl font-semibold">Skills</h2>
+      <section className="flex flex-col gap-6 px-4 sm:px-8 lg:px-16">
+        <h2 className="text-3xl font-semibold sm:text-4xl">Skills</h2>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {skills.map(({ category, items }) => (
             <div

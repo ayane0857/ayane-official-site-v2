@@ -12,14 +12,14 @@ export default function Header() {
     router.replace(pathname, { locale: nextLocale });
   };
   return (
-    <header className="flex items-center justify-between px-8 py-4">
+    <header className="flex items-center justify-between gap-3 px-4 py-4 sm:px-8">
       {/* ナビゲーションメニュー */}
       <nav>
-        <ul className="flex items-center gap-6">
+        <ul className="flex items-center gap-3 sm:gap-6">
           <li>
             <Link
               href="/"
-              className="text-2xl underline-offset-8 transition-colors hover:underline hover:text-gray-600"
+              className="text-base underline-offset-4 transition-colors hover:underline hover:text-gray-600 sm:text-2xl sm:underline-offset-8"
             >
               Home
             </Link>
@@ -27,7 +27,7 @@ export default function Header() {
           <li>
             <Link
               href="/about"
-              className="text-2xl underline-offset-8 transition-colors hover:underline hover:text-gray-600"
+              className="text-base underline-offset-4 transition-colors hover:underline hover:text-gray-600 sm:text-2xl sm:underline-offset-8"
             >
               About
             </Link>
@@ -35,7 +35,7 @@ export default function Header() {
           <li>
             <Link
               href="/portfolio"
-              className="text-2xl underline-offset-8 transition-colors hover:underline hover:text-gray-600"
+              className="text-base underline-offset-4 transition-colors hover:underline hover:text-gray-600 sm:text-2xl sm:underline-offset-8"
             >
               Portfolio
             </Link>
@@ -43,7 +43,7 @@ export default function Header() {
           <li>
             <Link
               href="/contact"
-              className="text-2xl underline-offset-8 transition-colors hover:underline hover:text-gray-600"
+              className="text-base underline-offset-4 transition-colors hover:underline hover:text-gray-600 sm:text-2xl sm:underline-offset-8"
             >
               Contact
             </Link>
@@ -51,23 +51,23 @@ export default function Header() {
         </ul>
       </nav>
 
-      <div className="flex items-center justify-center gap-3">
+      <div className="flex shrink-0 items-center justify-center gap-2 sm:gap-3">
         <button
           type="button"
           onClick={() => changeLanguage("ja")}
-          className={`text-xl text-[#545454] transition-colors ${
+          className={`text-base text-[#545454] transition-colors sm:text-xl ${
             locale !== "ja" && "hover:text-[#CFCFCF]"
           }`}
         >
           JA
         </button>
 
-        <span className="text-xl font-light text-[#545454]">/</span>
+        <span className="text-base font-light text-[#545454] sm:text-xl">/</span>
 
         <button
           type="button"
           onClick={() => changeLanguage("en")}
-          className={`text-xl text-[#545454] transition-colors ${
+          className={`text-base text-[#545454] transition-colors sm:text-xl ${
             locale !== "en" && "hover:text-[#CFCFCF]"
           }`}
         >

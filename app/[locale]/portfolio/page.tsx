@@ -12,8 +12,8 @@ export default function Portfolio() {
   return (
     <div>
       <div className="flex flex-col gap-4 px-5 py-4 sm:px-8 lg:px-16">
-        <h1 className="text-6xl font-bold">Portfolio</h1>
-        <p className="max-w-2xl whitespace-pre-line text-xl text-[#545454]">
+        <h1 className="text-5xl font-bold sm:text-6xl">Portfolio</h1>
+        <p className="max-w-2xl whitespace-pre-line text-lg text-[#545454] sm:text-xl">
           {t("TitleText")}
         </p>
       </div>
