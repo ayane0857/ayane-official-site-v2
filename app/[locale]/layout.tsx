@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Header from "@/component/header";
 import Footer from "@/component/footer";
 import { NextIntlClientProvider } from "next-intl";
@@ -25,7 +26,9 @@ export default async function LocaleLayout({ children, params }: Props) {
     <html lang={locale}>
       <body className="flex min-h-full flex-col root gap-16">
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <Header />
+          <Suspense fallback={null}>
+            <Header />
+          </Suspense>
           {children}
           <Footer />
         </NextIntlClientProvider>

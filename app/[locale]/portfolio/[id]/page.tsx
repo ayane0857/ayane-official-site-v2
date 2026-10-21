@@ -1,9 +1,10 @@
+import { Suspense } from "react";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/data/Portfolio";
 
-export default async function Portfolio({
+async function PortfolioContent({
   params,
 }: {
   params: Promise<{ id: string }>;
@@ -44,5 +45,15 @@ export default async function Portfolio({
         </div>
       </div>
     </div>
+  );
+}
+
+export default function Portfolio(props: {
+  params: Promise<{ id: string }>;
+}) {
+  return (
+    <Suspense fallback={null}>
+      <PortfolioContent {...props} />
+    </Suspense>
   );
 }
