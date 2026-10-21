@@ -8,17 +8,29 @@ import { FreeMode } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import { MdChevronRight } from "react-icons/md";
+import { projects, type ProjectData } from "@/data/Portfolio";
 
-const items = Array.from({ length: 5 }, (_, index) => {
-  const id = index + 1;
+export type PortfolioItem = {
+  id: number;
+  src: string;
+  alt: string;
+  href: string;
+  tags: string[];
+  date: string;
+  links: ProjectData["links"];
+};
 
-  return {
-    id,
-    src: `/images/portfolio/${id}.jpg`,
-    alt: `作品${id}`,
-    href: `/portfolio/${id}`,
-  };
-});
+const items: PortfolioItem[] = [...projects]
+  .sort((a, b) => b.timestmp.localeCompare(a.timestmp)) // 新しい順
+  .map((project) => ({
+    id: project.id,
+    src: `/images/portfolio/${project.id}.png`,
+    alt: String(project.id),
+    href: `/portfolio/${project.id}`,
+    tags: project.tags,
+    date: project.timestmp,
+    links: project.links,
+  }));
 
 export default function PortfolioSlider() {
   const swiperRef = useRef<SwiperType | null>(null);
@@ -45,7 +57,7 @@ export default function PortfolioSlider() {
           swiperRef.current = swiper;
           updateNavigation(swiper);
         }}
-        onSlideChange={updateNavigation}
+        onProgress={updateNavigation}
         onFromEdge={updateNavigation}
         onResize={updateNavigation}
         onUpdate={updateNavigation}
@@ -84,9 +96,9 @@ export default function PortfolioSlider() {
         type="button"
         onClick={() => swiperRef.current?.slideNext()}
         disabled={!canSlideNext}
+        tabIndex={canSlideNext ? 0 : -1}
         aria-label="次の作品を見る"
-        aria-hidden={!canSlideNext}
-        className={`absolute right-4 top-1/2 z-20 hidden size-12 -translate-y-1/2 place-items-center rounded-full text-neutral-800 ing-1 ring-black/5 transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-700 disabled:cursor-default md:grid ${visibilityClass}`}
+        className={`absolute right-4 top-1/2 z-20 hidden size-12 -translate-y-1/2 place-items-center rounded-full bg-white/90 text-neutral-800 shadow-md ring-1 ring-black/5 transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-700 disabled:cursor-default md:grid ${visibilityClass}`}
       >
         <MdChevronRight className="size-6" />
       </button>

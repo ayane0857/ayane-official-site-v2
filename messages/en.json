@@ -1,9 +1,24 @@
 {
     "Home": {
-        "HeroText": "I'm a high school student engineer born in 2010.\nI want to live as a cat.\nI do all sorts of fun things outside of programming.\nI'm a weak engineer, so please be gentle with me.",
+        "HeroText": "I'm a high school engineer born in 2010.\nI want to live as a cat.\nI'll do anything that seems fun other than programming.\nI'm a sloppy engineer, so please be gentle with me.",
         "ViewPortfolio": "View Portfolio"
     },
     "Footer": {
-        "FooterText": "A high school student engineer born in 2010\nI want to live my life as a cat"
+        "FooterText": "High school engineer born in 2010\nI want to live as a cat"
+    },
+    "About": {
+        "AboutText": "About me",
+        "IntroTitle": "About Ayane",
+        "IntroText": "I'm currently a 16-year-old high school engineer.\nI want to take my time and relax.\nI'm trying to do a lot of things other than programming.\nI'm a timid person, so I want people to treat me kindly.\nI don't have many opportunities to program these days, which is scary."
+    },
+    "Portfolio": {
+        "TitleText": "Projects I've created",
+        "View": "View",
+        "0": {
+            "title": "ayane-home"
+        },
+        "1": {
+            "title": "React Project"
+        }
     }
 }
