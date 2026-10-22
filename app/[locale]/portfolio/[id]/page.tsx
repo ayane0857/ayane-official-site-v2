@@ -13,6 +13,7 @@ import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import { portfolios } from "@/data/Portfolio";
+import { locale } from "next/root-params";
 
 type Props = PageProps<"/[locale]/portfolio/[id]">;
 
@@ -103,7 +104,7 @@ async function PortfolioContent({
 }: {
   params: PageProps<"/[locale]/portfolio/[id]">["params"];
 }) {
-  const { id } = await params;
+  const { id, locale } = await params;
   const portfolio = portfolios.find((item) => String(item.id) === id);
 
   if (!portfolio) notFound();
@@ -111,22 +112,22 @@ async function PortfolioContent({
   const t = await getTranslations("Portfolio");
   const title = t(`${portfolio.id}.title`);
   const description = t(`${portfolio.id}.description`);
-  const date = new Intl.DateTimeFormat(undefined, {
+  const date = new Intl.DateTimeFormat(locale, {
     year: "numeric",
     month: "long",
   }).format(new Date(`${portfolio.timestmp}T00:00:00`));
-  const links = portfolioLinks
-    .flatMap(({ key, label }) => {
-      const value = portfolio.links[key];
-      const hrefs = Array.isArray(value) ? value : value ? [value] : [];
+  const links = portfolioLinks.flatMap(({ key, label }) => {
+    const value = portfolio.links[key];
+    const hrefs = Array.isArray(value) ? value : value ? [value] : [];
 
-      return hrefs.map((href, index) => ({
-        id: `${key}-${index}`,
-        key,
-        label: key === "site" && hrefs.length > 1 ? `${label} ${index + 1}` : label,
-        href,
-      }));
-    });
+    return hrefs.map((href, index) => ({
+      id: `${key}-${index}`,
+      key,
+      label:
+        key === "site" && hrefs.length > 1 ? `${label} ${index + 1}` : label,
+      href,
+    }));
+  });
 
   return (
     <main className="flex flex-col gap-10 pb-12 sm:gap-14 sm:pb-16">

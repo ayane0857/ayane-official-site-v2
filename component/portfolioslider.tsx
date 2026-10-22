@@ -68,7 +68,7 @@ export default function PortfolioSlider() {
         onLock={() => setCanSlideNext(false)}
         onUnlock={updateNavigation}
         role="region"
-        aria-label="ポートフォリオ作品一覧"
+        aria-label={t("Portfolio-list")}
       >
         {items.map((item) => (
           <SwiperSlide key={item.id} className="!w-[70vw] md:!w-[304px]">

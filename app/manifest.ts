@@ -6,7 +6,7 @@ export default function manifest(): MetadataRoute.Manifest {
     short_name: "ayane.home",
     description:
       "2010年生まれの高校生エンジニア、彩音のポートフォリオサイトです。",
-    start_url: "/ja/",
+    start_url: "/",
     display: "standalone",
     background_color: "#ffffff",
     theme_color: "#ffffff",
