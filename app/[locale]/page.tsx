@@ -75,11 +75,11 @@ export default function Home() {
           <p className="whitespace-pre-line text-lg sm:text-xl">
             {t("HeroText")}
           </p>
-          <div>
+          <div className="flex flex-col gap-4">
             <p className="text-xl text-[#545454]">Tags</p>
             <div className="flex flex-wrap items-center gap-2">
               <span className="rounded-full bg-[#f1f1f1] px-4 py-1">
-                #UniPortfolio
+                #UniProject
               </span>
               <span className="rounded-full bg-[#f1f1f1] px-4 py-1">
                 #Next.js
