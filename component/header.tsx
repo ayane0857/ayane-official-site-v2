@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@base-ui/react/button";
 import { useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 
@@ -51,7 +52,7 @@ export default function Header() {
       </nav>
 
       <div className="flex shrink-0 items-center justify-center gap-2 sm:gap-3">
-        <button
+        <Button
           type="button"
           onClick={() => changeLanguage("ja")}
           className={`text-base text-[#545454] transition-colors sm:text-xl ${
@@ -59,11 +60,11 @@ export default function Header() {
           }`}
         >
           JA
-        </button>
+        </Button>
 
         <span className="text-base font-light text-[#545454] sm:text-xl">/</span>
 
-        <button
+        <Button
           type="button"
           onClick={() => changeLanguage("en")}
           className={`text-base text-[#545454] transition-colors sm:text-xl ${
@@ -71,7 +72,7 @@ export default function Header() {
           }`}
         >
           EN
-        </button>
+        </Button>
       </div>
     </header>
   );

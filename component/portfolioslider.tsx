@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { Button } from "@base-ui/react/button";
 import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -8,12 +9,13 @@ import { FreeMode } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import { MdChevronRight } from "react-icons/md";
+import { FiEye } from "react-icons/fi";
+import { useTranslations } from "next-intl";
 import { portfolios, type PortfolioData } from "@/data/Portfolio";
 
 export type PortfolioItem = {
   id: number;
   src: string;
-  alt: string;
   href: string;
   tags: string[];
   date: string;
@@ -21,11 +23,11 @@ export type PortfolioItem = {
 };
 
 const items: PortfolioItem[] = [...portfolios]
-  .sort((a, b) => b.timestmp.localeCompare(a.timestmp)) // 新しい順
+  .sort((a, b) => b.timestmp.localeCompare(a.timestmp))
+  .slice(0, 7)
   .map((portfolio) => ({
     id: portfolio.id,
-    src: `/images/portfolio/${portfolio.id}.png`,
-    alt: String(portfolio.id),
+    src: portfolio.links.image ?? "/images/no_image.jpg",
     href: `/portfolio/${portfolio.id}`,
     tags: portfolio.tags,
     date: portfolio.timestmp,
@@ -33,6 +35,7 @@ const items: PortfolioItem[] = [...portfolios]
   }));
 
 export default function PortfolioSlider() {
+  const t = useTranslations("Portfolio");
   const swiperRef = useRef<SwiperType | null>(null);
   const [canSlideNext, setCanSlideNext] = useState(false);
 
@@ -71,15 +74,20 @@ export default function PortfolioSlider() {
           <SwiperSlide key={item.id} className="!w-[70vw] md:!w-[304px]">
             <Link
               href={item.href}
-              className="relative block aspect-video overflow-hidden rounded-xl bg-neutral-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-neutral-700"
+              aria-label={`${t(`${item.id}.title`)} — ${t("View")}`}
+              className="group relative block aspect-video overflow-hidden rounded-xl bg-neutral-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-neutral-700"
             >
               <Image
                 src={item.src}
-                alt={item.alt}
+                alt={t(`${item.id}.title`)}
                 fill
                 sizes="(max-width: 768px) 70vw, 304px"
-                className="object-cover"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
+              <span className="pointer-events-none absolute inset-0 flex items-center justify-center gap-2 bg-black/50 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
+                <FiEye size={28} aria-hidden="true" />
+                <span className="text-xl font-bold">{t("View")}</span>
+              </span>
             </Link>
           </SwiperSlide>
         ))}
@@ -92,7 +100,7 @@ export default function PortfolioSlider() {
       />
 
       {/* 次へボタン */}
-      <button
+      <Button
         type="button"
         onClick={() => swiperRef.current?.slideNext()}
         disabled={!canSlideNext}
@@ -101,7 +109,7 @@ export default function PortfolioSlider() {
         className={`absolute right-4 top-1/2 z-20 hidden size-12 -translate-y-1/2 place-items-center rounded-full bg-white/90 text-neutral-800 shadow-md ring-1 ring-black/5 transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-700 disabled:cursor-default md:grid ${visibilityClass}`}
       >
         <MdChevronRight className="size-6" />
-      </button>
+      </Button>
     </div>
   );
 }

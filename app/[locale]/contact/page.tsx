@@ -52,7 +52,7 @@ const contacts = [
     name: "Email",
     account: "info@ayane0857.com",
     descriptionKey: "EmailText",
-    href: "mailto:ayane0857@example.com",
+    href: "mailto:info@ayane0857.com",
     Icon: FiMail,
   },
   {
@@ -92,7 +92,7 @@ export default function Contact() {
           </p>
         </header>
 
-        <div className="flex flex-col gap-4 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
           {contacts.map(({ name, account, descriptionKey, href, Icon }) => (
             <a
               key={name}

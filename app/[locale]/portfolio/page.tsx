@@ -66,7 +66,7 @@ export default function Portfolio() {
 
       <section
         aria-label={t("TitleText")}
-        className="grid grid-cols-1 gap-6 px-4 pb-16 sm:grid-cols-2 sm:px-8 lg:grid-cols-3 lg:gap-8 lg:px-16"
+        className="grid grid-cols-1 gap-6 px-4 pb-16 sm:grid-cols-2 sm:px-8 lg:grid-cols-4 lg:gap-8 lg:px-16"
       >
         {sorted.map((portfolio) => (
           <PortfolioCard

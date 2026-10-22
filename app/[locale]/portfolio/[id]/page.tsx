@@ -116,10 +116,17 @@ async function PortfolioContent({
     month: "long",
   }).format(new Date(`${portfolio.timestmp}T00:00:00`));
   const links = portfolioLinks
-    .map(({ key, label }) => ({ key, label, href: portfolio.links[key] }))
-    .filter((link): link is typeof link & { href: string } =>
-      Boolean(link.href),
-    );
+    .flatMap(({ key, label }) => {
+      const value = portfolio.links[key];
+      const hrefs = Array.isArray(value) ? value : value ? [value] : [];
+
+      return hrefs.map((href, index) => ({
+        id: `${key}-${index}`,
+        key,
+        label: key === "site" && hrefs.length > 1 ? `${label} ${index + 1}` : label,
+        href,
+      }));
+    });
 
   return (
     <main className="flex flex-col gap-10 pb-12 sm:gap-14 sm:pb-16">
@@ -188,8 +195,8 @@ async function PortfolioContent({
             Portfolio links
           </h2>
           <ul className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
-            {links.map(({ key, label, href }) => (
-              <li key={key}>
+            {links.map(({ id, key, label, href }) => (
+              <li key={id}>
                 <a
                   href={href}
                   target="_blank"
