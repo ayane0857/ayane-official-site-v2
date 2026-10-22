@@ -69,12 +69,12 @@ export default function Home() {
         </div>
         <div className="flex w-full max-w-2xl flex-col gap-6 md:gap-8">
           <div className="flex flex-col gap-2">
-            <p className="text-4xl font-bold sm:text-5xl">Ayane</p>
+            <h1 className="text-4xl font-bold sm:text-5xl">Ayane</h1>
             <span className="text-xl text-[#545454]">Student / Engineer</span>
           </div>
-          <p className="whitespace-pre-line text-lg sm:text-xl">
+          <h3 className="whitespace-pre-line text-lg sm:text-xl">
             {t("HeroText")}
-          </p>
+          </h3>
           <div className="flex flex-col gap-4">
             <p className="text-xl text-[#545454]">Tags</p>
             <div className="flex flex-wrap items-center gap-2">
@@ -93,7 +93,7 @@ export default function Home() {
       </section>
       <section className="flex flex-col gap-6 px-4 sm:px-8 lg:px-16">
         <div className="flex items-center justify-between">
-          <p className="text-2xl font-semibold sm:text-3xl">Portfolio</p>
+          <h2 className="text-2xl font-semibold sm:text-3xl">Portfolio</h2>
           <Link
             href="/portfolio"
             className="flex cursor-pointer items-center gap-2 text-[#545454]"
@@ -105,7 +105,7 @@ export default function Home() {
         <PortfolioSlider />
       </section>
       <section className="flex flex-col gap-6 px-4 sm:px-8 lg:px-16">
-        <p className="text-2xl font-semibold sm:text-3xl">Socials</p>
+        <h2 className="text-2xl font-semibold sm:text-3xl">Socials</h2>
         <Socials />
       </section>
     </div>
