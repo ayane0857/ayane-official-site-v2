@@ -12,7 +12,7 @@ import NextTopLoader from "nextjs-toploader";
 import { LINE_Seed_JP } from "next/font/google";
 import "./globals.css";
 
-const LineFont = LINE_Seed_JP({ weight: "400" });
+const LineFont = LINE_Seed_JP({ weight: "400", adjustFontFallback: false });
 
 type Props = LayoutProps<"/[locale]">;
 
