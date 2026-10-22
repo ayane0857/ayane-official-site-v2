@@ -25,8 +25,7 @@ async function getNotFoundLocale(): Promise<Locale> {
     : routing.defaultLocale;
 }
 
-async function LocalizedNotFound() {
-  const locale = await getNotFoundLocale();
+async function LocalizedNotFound({ locale }: { locale: Locale }) {
   const [messages, t] = await Promise.all([
     getMessages({ locale }),
     getTranslations({ locale, namespace: "NotFound" }),
@@ -58,11 +57,13 @@ async function LocalizedNotFound() {
 }
 
 export default async function GlobalNotFound() {
+  const locale = await getNotFoundLocale();
+
   return (
-    <html lang={routing.defaultLocale}>
+    <html lang={locale}>
       <body>
         <Suspense fallback={null}>
-          <LocalizedNotFound />
+          <LocalizedNotFound locale={locale} />
         </Suspense>
       </body>
     </html>
