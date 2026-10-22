@@ -6,9 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: [
-      "https://ayane0857.net/ja/sitemap.xml",
-      "https://ayane0857.net/en/sitemap.xml",
-    ],
+    sitemap: "https://ayane0857.net/sitemap.xml",
   };
 }
