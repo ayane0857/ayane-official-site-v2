@@ -1,0 +1,82 @@
+{
+    "Home": {
+        "MetaTitle": "彩音の公式サイトです",
+        "MetaDescription": "彩音について載せたり、制作物を載せています",
+        "HeroText": "2010年生まれの高校生エンジニアです\n猫として生きていきたいと思ってる\nプログラミング以外にも楽しそうなことは何でもやります\nよわよわエンジニアなので手加減してほしいです",
+        "ViewPortfolio": "ポートフォリオを見る"
+    },
+    "About": {
+        "AboutText": "私について",
+        "MetaTitle": "彩音について",
+        "MetaDescription": "彩音についての紹介ページです",
+        "IntroTitle": "彩音について",
+        "IntroText": "今16歳の現役高校生エンジニアです。\nゆったりゆらゆら行きたいと思ってます。\nプログラミング以外にもいろいろなことに手を付けています。\nよわよわ人間なので優しく扱ってほしいです。\n最近はプログラミングする機会減っててやばい。"
+    },
+    "Portfolio": {
+        "TitleText": "私が作ってきた制作物たち",
+        "MetaTitle": "ポートフォリオ",
+        "MetaDescription": "私が作った制作物たちを乗せています",
+        "View": "見る",
+        "Portfolio-list": "ポートフォリオ作品一覧",
+        "0": {
+            "title": "彩奏 彼方 公式サイト",
+            "description": "単独音で構成されたシンプルな音源。"
+        },
+        "1": {
+            "title": "支払い履歴を閲覧できるAPIを作ってみた",
+            "description": "UniProject 2025 LT大会 夏の陣"
+        },
+        "2": {
+            "title": "ダーリン cover:馳音ヤタ",
+            "description": "初めてのUTAUカバー作品です！\nUTAUについてあまり知らない状態から一日で作りました。"
+        },
+        "3": {
+            "title": "深海少女 -deep sea girl- cover:謎",
+            "description": "二日目の作品（二作品目）です。\n今回はできるだけ自分だけで作ってみました"
+        },
+        "4": {
+            "title": "ひつじがいっぴき cover:馳音ユト",
+            "description": "今回は別の人にMIXを教えてもらって作りました！"
+        },
+        "5": {
+            "title": "新しい技術をいっぱい触っておもったこと",
+            "description": "UniProject 2025 LT大会 冬の陣"
+        },
+        "6": {
+            "title": "ヘッダー",
+            "description": "彩音のサイトのヘッダー画像です。\nサイトの雰囲気に合わせて制作しました。"
+        },
+        "7": {
+            "title": "ayane.home",
+            "description": "Next.jsとTypeScriptで作ったポートフォリオサイトです。"
+        }
+    },
+    "Contact": {
+        "ContactText": "お問い合わせはこちら",
+        "ChooseMethod": "連絡方法を選んでください",
+        "MetaTitle": "連絡先",
+        "MetaDescription": "私への連絡先を載せています",
+        "MethodText": "内容に合わせて、気軽な方法でご連絡ください。",
+        "GitHubText": "コードや制作物についてのご質問はこちら",
+        "XText": "気軽なメッセージや日常の話はこちら",
+        "EmailText": "メールでのご連絡はこちら"
+    },
+    "Footer": {
+        "FooterText": "2010年生まれの高校生エンジニア\n猫として生きていきたい"
+    },
+    "Manifest": {
+        "Name": "ayane.home - 彩音の公式サイト",
+        "Description": "2010年生まれの高校生エンジニア、彩音のポートフォリオサイトです。"
+    },
+    "Metadata": {
+        "SiteName": "ayane.home - 彩音の公式サイト",
+        "Title": "ayane.home - 彩音の公式サイト",
+        "Description": "2010年生まれの高校生エンジニア、彩音のポートフォリオサイトです",
+        "ImageAlt": "彩音のアイコン"
+    },
+    "NotFound": {
+        "Title": "ページが見つかりません",
+        "Description": "お探しのページは存在しないか、移動した可能性があります。",
+        "ReturnHome": "ホームへ戻る"
+    }
+}

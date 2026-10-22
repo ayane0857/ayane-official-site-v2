@@ -5,8 +5,10 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/_next"],
     },
-    sitemap: "https://ayane0857.net/sitemap.xml",
+    sitemap: [
+      "https://ayane0857.net/ja/sitemap.xml",
+      "https://ayane0857.net/en/sitemap.xml",
+    ],
   };
 }
