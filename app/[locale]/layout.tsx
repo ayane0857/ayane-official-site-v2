@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const t = await getTranslations({ locale, namespace: "Metadata" });
   const siteUrl = "https://ayane0857.net";
-  const localizedUrl = `${siteUrl}/${locale}`;
+  const localizedUrl = `${siteUrl}/`;
   const languages = Object.fromEntries(
     routing.locales.map((supportedLocale) => [
       supportedLocale,
@@ -103,7 +103,9 @@ export default async function LocaleLayout({ children, params }: Props) {
           <Suspense fallback={null}>
             <Header />
           </Suspense>
-          <div className="flex-1">{children}</div>
+          <div role="main" className="flex-1">
+            {children}
+          </div>
           <Suspense fallback={null}>
             <Footer />
           </Suspense>

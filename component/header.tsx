@@ -15,7 +15,10 @@ export default function Header() {
     window.location.assign(destination);
   };
   return (
-    <header className="grid grid-cols-[1fr_auto] items-center gap-3 px-4 py-4 sm:flex sm:flex-row sm:justify-between sm:flex-nowrap sm:px-8">
+    <header
+      role="banner"
+      className="grid grid-cols-[1fr_auto] items-center gap-3 px-4 py-4 sm:flex sm:flex-row sm:justify-between sm:flex-nowrap sm:px-8"
+    >
       <Link href="/" className="font-bold text-lg">
         AYANE.HOME
       </Link>

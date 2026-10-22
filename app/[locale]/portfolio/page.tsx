@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const t = await getTranslations({ locale, namespace: "Portfolio" });
   const siteUrl = "https://ayane0857.net";
-  const localizedUrl = `${siteUrl}/${locale}/portfolio`;
+  const localizedUrl = `${siteUrl}/portfolio`;
   const languages = Object.fromEntries(
     routing.locales.map((supportedLocale) => [
       supportedLocale,
