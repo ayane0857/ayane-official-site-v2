@@ -98,7 +98,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       <body
         className={`flex min-h-screen flex-col root gap-12 ${LineFont.className}`}
       >
-        <NextTopLoader height={2} />
+        <NextTopLoader height={2} showSpinner={false} />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Suspense fallback={null}>
             <Header />
