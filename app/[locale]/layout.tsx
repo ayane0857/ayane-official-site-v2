@@ -8,6 +8,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import NextTopLoader from "nextjs-toploader";
 import "./globals.css";
 
 type Props = LayoutProps<"/[locale]">;
@@ -92,6 +93,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale}>
       <body className="flex min-h-full flex-col root gap-12">
+        <NextTopLoader height={2} />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Suspense fallback={null}>
             <Header />

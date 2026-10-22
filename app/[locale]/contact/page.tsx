@@ -92,7 +92,7 @@ export default function Contact() {
           </p>
         </header>
 
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+        <div className="flex flex-col gap-8">
           {contacts.map(({ name, account, descriptionKey, href, Icon }) => (
             <a
               key={name}
