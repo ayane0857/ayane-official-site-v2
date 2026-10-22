@@ -9,7 +9,10 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import NextTopLoader from "nextjs-toploader";
+import { LINE_Seed_JP } from "next/font/google";
 import "./globals.css";
+
+const LineFont = LINE_Seed_JP({ weight: "400" });
 
 type Props = LayoutProps<"/[locale]">;
 
@@ -92,13 +95,15 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={locale}>
-      <body className="flex min-h-full flex-col root gap-12">
+      <body
+        className={`flex min-h-screen flex-col root gap-12 ${LineFont.className}`}
+      >
         <NextTopLoader height={2} />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Suspense fallback={null}>
             <Header />
           </Suspense>
-          {children}
+          <div className="flex-1">{children}</div>
           <Suspense fallback={null}>
             <Footer />
           </Suspense>
