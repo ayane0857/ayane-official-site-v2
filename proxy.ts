@@ -5,6 +5,10 @@ export default createMiddleware(routing);
 
 export const config = {
   // Exclude framework and API paths without accidentally matching names like
-  // `/apiary` or `/trpc-info`.
-  matcher: "/((?!(?:api|trpc|_next|_vercel)(?:/|$)|.*\\..*).*)",
+  // `/apiary` or `/trpc-info`. Locale sitemap routes need the proxy despite
+  // their `.xml` suffix so next-intl can provide the requested locale.
+  matcher: [
+    "/((?!(?:api|trpc|_next|_vercel)(?:/|$)|.*\\..*).*)",
+    "/(ja|en)/sitemap.xml",
+  ],
 };

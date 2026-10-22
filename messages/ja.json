@@ -1,26 +1,57 @@
 {
     "Home": {
+        "MetaTitle": "彩音の公式サイトです",
+        "MetaDescription": "彩音について載せたり、制作物を載せています",
         "HeroText": "2010年生まれの高校生エンジニアです\n猫として生きていきたいと思ってる\nプログラミング以外にも楽しそうなことは何でもやります\nよわよわエンジニアなので手加減してほしいです",
         "ViewPortfolio": "ポートフォリオを見る"
     },
-    "Footer": {
-        "FooterText": "2010年生まれの高校生エンジニア\n猫として生きていきたい"
-    },
     "About": {
         "AboutText": "私について",
+        "MetaTitle": "彩音について",
+        "MetaDescription": "彩音についての紹介ページです",
         "IntroTitle": "彩音について",
         "IntroText": "今16歳の現役高校生エンジニアです。\nゆったりゆらゆら行きたいと思ってます。\nプログラミング以外にもいろいろなことに手を付けています。\nよわよわ人間なので優しく扱ってほしいです。\n最近はプログラミングする機会減っててやばい。"
     },
     "Portfolio": {
         "TitleText": "私が作ってきた制作物たち",
+        "MetaTitle": "ポートフォリオ",
+        "MetaDescription": "私が作った制作物たちを乗せています",
         "View": "見る",
         "0": {
             "title": "ayane.home",
             "description": "Next.jsとTypeScriptで作ったポートフォリオサイトです。"
         },
         "1": {
-            "title": "React Project",
+            "title": "React Portfolio",
             "description": "Reactで作ったプロジェクトです。"
         }
+    },
+    "Contact": {
+        "ContactText": "お問い合わせはこちら",
+        "ChooseMethod": "連絡方法を選んでください",
+        "MetaTitle": "連絡先",
+        "MetaDescription": "私への連絡先を載せています",
+        "MethodText": "内容に合わせて、気軽な方法でご連絡ください。",
+        "GitHubText": "コードや制作物についてのご質問はこちら",
+        "XText": "気軽なメッセージや日常の話はこちら",
+        "EmailText": "メールでのご連絡はこちら"
+    },
+    "Footer": {
+        "FooterText": "2010年生まれの高校生エンジニア\n猫として生きていきたい"
+    },
+    "Manifest": {
+        "Name": "ayane.home - 彩音の公式サイト",
+        "Description": "2010年生まれの高校生エンジニア、彩音のポートフォリオサイトです。"
+    },
+    "Metadata": {
+        "SiteName": "ayane.home - 彩音の公式サイト",
+        "Title": "ayane.home - 彩音の公式サイト",
+        "Description": "2010年生まれの高校生エンジニア、彩音のポートフォリオサイトです",
+        "ImageAlt": "彩音のアイコン"
+    },
+    "NotFound": {
+        "Title": "ページが見つかりません",
+        "Description": "お探しのページは存在しないか、移動した可能性があります。",
+        "ReturnHome": "ホームへ戻る"
     }
 }

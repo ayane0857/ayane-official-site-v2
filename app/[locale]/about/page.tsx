@@ -1,4 +1,50 @@
 import { useTranslations } from "next-intl";
+import { hasLocale } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
+import type { Metadata } from "next";
+
+type Props = PageProps<"/[locale]/about">;
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
+  const t = await getTranslations({ locale, namespace: "About" });
+  const siteUrl = "https://ayane0857.net";
+  const localizedUrl = `${siteUrl}/${locale}/about`;
+  const languages = Object.fromEntries(
+    routing.locales.map((supportedLocale) => [
+      supportedLocale,
+      `${siteUrl}/${supportedLocale}/about`,
+    ]),
+  );
+  const title = `ayane.home - ${t("MetaTitle")}`;
+  const description = t("MetaDescription");
+
+  return {
+    title,
+    description,
+    openGraph: {
+      type: "website",
+      url: localizedUrl,
+      title,
+      description,
+    },
+    twitter: {
+      title,
+      description,
+    },
+    alternates: {
+      canonical: localizedUrl,
+      languages,
+    },
+  };
+}
 
 const skills = [
   {
@@ -34,20 +80,23 @@ const profile = [
 export default function About() {
   const t = useTranslations("About");
   return (
-    <main className="flex flex-col gap-16">
-      <header className="flex flex-col gap-4 px-4 py-4 sm:px-8 lg:px-16">
-        <h1 className="text-5xl font-bold sm:text-6xl">About</h1>
+    <div className="flex flex-col gap-12">
+      <div className="flex flex-col gap-4 px-4 py-4 sm:px-8 lg:px-16">
+        <h1 className="text-4xl font-bold sm:text-5xl">About</h1>
         <p className="max-w-2xl whitespace-pre-line text-lg text-[#545454] sm:text-xl">
           {t("AboutText")}
         </p>
-      </header>
+      </div>
 
       <section
         aria-labelledby="profile-heading"
-        className="grid items-center gap-8 px-4 py-4 sm:px-8 md:grid-cols-2 lg:px-16"
+        className="grid items-center gap-8 md:gap-48 px-4 py-4 sm:px-8 md:grid-cols-2 lg:px-16"
       >
         <div className="flex flex-col gap-6">
-          <h2 id="profile-heading" className="text-3xl font-semibold sm:text-4xl">
+          <h2
+            id="profile-heading"
+            className="text-2xl font-semibold sm:text-3xl"
+          >
             {t("IntroTitle")}
           </h2>
           <p className="max-w-xl whitespace-pre-line text-lg leading-8 text-[#545454] sm:text-xl">
@@ -86,7 +135,7 @@ export default function About() {
       </section>
 
       <section className="flex flex-col gap-6 px-4 sm:px-8 lg:px-16">
-        <h2 className="text-3xl font-semibold sm:text-4xl">Skills</h2>
+        <h2 className="text-2xl font-semibold sm:text-3xl">Skills</h2>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {skills.map(({ category, items }) => (
             <div
@@ -105,6 +154,6 @@ export default function About() {
           ))}
         </div>
       </section>
-    </main>
+    </div>
   );
 }

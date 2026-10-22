@@ -1,15 +1,14 @@
 "use client";
 
 import { useLocale } from "next-intl";
-import { Link, usePathname, useRouter } from "@/i18n/navigation";
+import { Link } from "@/i18n/navigation";
 
 export default function Header() {
   const locale = useLocale();
-  const pathname = usePathname();
-  const router = useRouter();
-
   const changeLanguage = (nextLocale: "ja" | "en") => {
-    router.replace(pathname, { locale: nextLocale });
+    const pathname = window.location.pathname.replace(/^\/(?:ja|en)(?=\/|$)/, "");
+    const destination = `/${nextLocale}${pathname || "/"}${window.location.search}${window.location.hash}`;
+    window.location.assign(destination);
   };
   return (
     <header className="flex items-center justify-between gap-3 px-4 py-4 sm:px-8">
@@ -19,7 +18,7 @@ export default function Header() {
           <li>
             <Link
               href="/"
-              className="text-base underline-offset-4 transition-colors hover:underline hover:text-gray-600 sm:text-2xl sm:underline-offset-8"
+              className="text-base underline-offset-4 transition-colors hover:underline hover:text-gray-600 sm:text-xl sm:underline-offset-8"
             >
               Home
             </Link>
@@ -27,7 +26,7 @@ export default function Header() {
           <li>
             <Link
               href="/about"
-              className="text-base underline-offset-4 transition-colors hover:underline hover:text-gray-600 sm:text-2xl sm:underline-offset-8"
+              className="text-base underline-offset-4 transition-colors hover:underline hover:text-gray-600 sm:text-xl sm:underline-offset-8"
             >
               About
             </Link>
@@ -35,7 +34,7 @@ export default function Header() {
           <li>
             <Link
               href="/portfolio"
-              className="text-base underline-offset-4 transition-colors hover:underline hover:text-gray-600 sm:text-2xl sm:underline-offset-8"
+              className="text-base underline-offset-4 transition-colors hover:underline hover:text-gray-600 sm:text-xl sm:underline-offset-8"
             >
               Portfolio
             </Link>
@@ -43,7 +42,7 @@ export default function Header() {
           <li>
             <Link
               href="/contact"
-              className="text-base underline-offset-4 transition-colors hover:underline hover:text-gray-600 sm:text-2xl sm:underline-offset-8"
+              className="text-base underline-offset-4 transition-colors hover:underline hover:text-gray-600 sm:text-xl sm:underline-offset-8"
             >
               Contact
             </Link>

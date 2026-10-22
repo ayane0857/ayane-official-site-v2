@@ -1,4 +1,4 @@
-export type ProjectLinks = {
+export type PortfolioLinks = {
   site: string | null;
   github: string | null;
   utaloader: string | null;
@@ -6,14 +6,14 @@ export type ProjectLinks = {
   image: string | null;
 };
 
-export type ProjectData = {
+export type PortfolioData = {
   id: number;
   tags: string[];
   timestmp: string;
-  links: ProjectLinks;
+  links: PortfolioLinks;
 };
 
-export const projects: ProjectData[] = [
+export const portfolios: PortfolioData[] = [
   {
     id: 0,
     tags: ["Next.js", "TypeScript", "Penpot"],

@@ -1,5 +1,7 @@
 {
     "Home": {
+        "MetaTitle": "Ayane's Official Site",
+        "MetaDescription": "Explore Ayane's profile and portfolio as a high school engineer.",
         "HeroText": "I'm a high school engineer born in 2010.\nI want to live as a cat.\nI'll do anything that seems fun other than programming.\nI'm a sloppy engineer, so please be gentle with me.",
         "ViewPortfolio": "View Portfolio"
     },
@@ -8,19 +10,49 @@
     },
     "About": {
         "AboutText": "About me",
+        "MetaTitle": "About Ayane",
+        "MetaDescription": "Learn more about Ayane, her interests, and the tools she uses.",
         "IntroTitle": "About Ayane",
         "IntroText": "I'm currently a 16-year-old high school engineer.\nI want to take my time and relax.\nI'm trying to do a lot of things other than programming.\nI'm a timid person, so I want people to treat me kindly.\nI don't have many opportunities to program these days, which is scary."
     },
     "Portfolio": {
         "TitleText": "Productions I've Made",
+        "MetaTitle": "Portfolio",
+        "MetaDescription": "Explore Ayane's UTAU covers and programming portfolio.",
         "View": "View",
         "0": {
             "title": "ayane.home",
             "description": "This is a portfolio site created using Next.js and TypeScript."
         },
         "1": {
-            "title": "React Project",
-            "description": "This is a project made with React."
+            "title": "React Portfolio",
+            "description": "This is a portfolio made with React."
         }
+    },
+    "Contact": {
+        "ContactText": "Get in touch",
+        "ChooseMethod": "Choose a way to reach me",
+        "MetaTitle": "Contact",
+        "MetaDescription": "Find ways to get in touch with Ayane.",
+        "MethodText": "Feel free to contact me through any of these accounts.",
+        "EmailText": "Contact me by email",
+        "GitHubText": "For questions about code and portfolio work",
+        "XText": "For a quick message or casual conversation",
+        "InstagramText": "For photos and casual updates"
+    },
+    "Manifest": {
+        "Name": "ayane.home - Ayane's official site",
+        "Description": "Portfolio site of Ayane, a high school engineer born in 2010."
+    },
+    "Metadata": {
+        "SiteName": "ayane.home - Ayane's Official Site",
+        "Title": "ayane.home - Ayane's Official Site",
+        "Description": "Portfolio site of Ayane, a high school engineer born in 2010.",
+        "ImageAlt": "Ayane's avatar"
+    },
+    "NotFound": {
+        "Title": "Page not found",
+        "Description": "The page you're looking for doesn't exist or may have moved.",
+        "ReturnHome": "Return home"
     }
 }

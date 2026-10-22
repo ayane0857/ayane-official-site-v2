@@ -12,10 +12,10 @@ export default function Footer() {
   const t = useTranslations("Footer");
 
   return (
-    <footer className="flex w-full flex-col gap-12 px-4 pt-16 pb-10 text-[#545454] sm:px-8 sm:pt-24 sm:pb-12">
+    <footer className="flex w-full flex-col gap-10 px-4 pt-12 pb-8 text-[#545454] sm:px-8 sm:pt-16 sm:pb-10">
       <div className="flex flex-col justify-between gap-10 md:flex-row">
         <div>
-          <Link href="/" className="text-4xl font-medium">
+          <Link href="/" className="text-3xl font-medium">
             ayane.home
           </Link>
           <p className="mt-3 text-base whitespace-pre-line">
