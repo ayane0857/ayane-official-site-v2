@@ -15,12 +15,12 @@ export default function Header() {
     window.location.assign(destination);
   };
   return (
-    <header className="flex flex-col sm:flex-row items-center justify-between gap-3 px-4 py-4 sm:flex-nowrap sm:px-8">
+    <header className="grid grid-cols-[1fr_auto] items-center gap-3 px-4 py-4 sm:flex sm:flex-row sm:justify-between sm:flex-nowrap sm:px-8">
       <Link href="/" className="font-bold text-lg">
         AYANE.HOME
       </Link>
-      <div className="flex flex-col items-end gap-2">
-        <nav>
+      <div className="contents sm:flex sm:flex-col sm:items-end sm:gap-2">
+        <nav className="col-span-2 justify-self-center sm:col-auto sm:justify-self-auto">
           <ul className="flex items-center gap-3 sm:gap-6">
             <li>
               <Link
@@ -57,7 +57,7 @@ export default function Header() {
           </ul>
         </nav>
 
-        <div className="flex shrink-0 items-center justify-center gap-2">
+        <div className="col-start-2 row-start-1 flex shrink-0 items-center justify-center gap-2 sm:col-auto sm:row-auto">
           <Button
             type="button"
             onClick={() => changeLanguage("ja")}
