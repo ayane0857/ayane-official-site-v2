@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "ayane.home - 彩音の公式サイト",
-    short_name: "ayane.home",
+    name: "AYANE.HOME - 彩音の公式サイト",
+    short_name: "AYANE.HOME",
     description:
       "2010年生まれの高校生エンジニア、彩音のポートフォリオサイトです。",
     start_url: "/",

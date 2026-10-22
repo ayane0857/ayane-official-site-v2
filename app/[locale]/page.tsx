@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       `${siteUrl}/${supportedLocale}/`,
     ]),
   );
-  const title = `ayane.home - ${t("MetaTitle")}`;
+  const title = `AYANE.HOME - ${t("MetaTitle")}`;
   const description = t("MetaDescription");
 
   return {
@@ -58,7 +58,7 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-12">
       <section className="flex flex-col items-center justify-center gap-8 px-4 py-16 sm:px-8 sm:py-42 md:flex-row">
-        <div className="w-full max-w-[180px] shrink-0 md:w-1/4 md:max-w-[280px]">
+        <div className="w-full max-w-[180px] shrink-0 md:w-1/2 md:max-w-[280px]">
           <Image
             src="/images/avatar.png"
             alt="Avatar"
@@ -68,7 +68,7 @@ export default function Home() {
           />
         </div>
         <div className="flex w-full max-w-2xl flex-col gap-6 md:gap-8">
-          <div>
+          <div className="flex flex-col gap-2">
             <p className="text-4xl font-bold sm:text-5xl">Ayane</p>
             <span className="text-xl text-[#545454]">Student / Engineer</span>
           </div>

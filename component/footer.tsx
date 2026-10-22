@@ -16,7 +16,7 @@ export default function Footer() {
       <div className="flex flex-col justify-between gap-10 md:flex-row">
         <div>
           <Link href="/" className="text-3xl font-medium">
-            ayane.home
+            AYANE.HOME
           </Link>
           <p className="mt-3 text-base whitespace-pre-line">
             {t("FooterText")}
@@ -59,7 +59,9 @@ export default function Footer() {
       </div>
 
       <div className="flex items-center gap-12 border-t border-[#CFCFCF] pt-10 text-base">
-        <p>© <CopyrightYear /> Ayane</p>
+        <p>
+          © <CopyrightYear /> Ayane
+        </p>
       </div>
     </footer>
   );

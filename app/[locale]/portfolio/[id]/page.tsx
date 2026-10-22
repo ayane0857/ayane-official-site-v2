@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       `${siteUrl}/${supportedLocale}/portfolio/${id}`,
     ]),
   );
-  const title = `ayane.home - ${t(`${portfolio.id}.title`)}`;
+  const title = `AYANE.HOME - ${t(`${portfolio.id}.title`)}`;
   const description = t(`${portfolio.id}.description`);
 
   return {

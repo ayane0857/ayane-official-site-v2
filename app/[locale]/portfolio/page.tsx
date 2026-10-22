@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       `${siteUrl}/${supportedLocale}/portfolio`,
     ]),
   );
-  const title = `ayane.home - ${t("MetaTitle")}`;
+  const title = `AYANE.HOME - ${t("MetaTitle")}`;
   const description = t("MetaDescription");
 
   return {
