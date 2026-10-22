@@ -16,6 +16,8 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
+export const instant = false;
+
 async function getNotFoundLocale(): Promise<Locale> {
   const requestHeaders = await headers();
   const requestLocale = requestHeaders.get("x-next-intl-locale");
