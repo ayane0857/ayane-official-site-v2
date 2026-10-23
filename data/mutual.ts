@@ -13,4 +13,5 @@ export const mutualSites: MutualSite[] = [
   { name: "soichi", url: "https://soichi-portfolio.soichi1208.workers.dev/" },
   { name: "一樹", url: "https://l-ituki8000.f5.si/" },
   { name: "ななしぃ", url: "https://nanasi-rasi.net/" },
+  { name: "やーはり", url: "https://ya-hari.skyia.jp/" },
 ];
