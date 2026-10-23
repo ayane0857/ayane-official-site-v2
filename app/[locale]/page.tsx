@@ -4,10 +4,12 @@ import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { MdChevronRight } from "react-icons/md";
+import { FiArrowUpRight, FiGlobe } from "react-icons/fi";
 import { hasLocale } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import { mutualSites } from "@/data/mutual";
 import type { Metadata } from "next";
 
 type Props = {
@@ -107,6 +109,44 @@ export default function Home() {
       <section className="flex flex-col gap-6 px-4 sm:px-8 lg:px-16">
         <h2 className="text-2xl font-semibold sm:text-3xl">Socials</h2>
         <Socials />
+      </section>
+      <section className="flex flex-col gap-6 px-4 sm:px-8 lg:px-16">
+        <div className="flex items-center justify-between">
+          <h2 className="text-2xl font-semibold sm:text-3xl">Mutual Link</h2>
+          <a
+            href="https://twitter.com/messages/compose?recipient_id=1818690132540899330&text=%E7%A7%81%E3%81%A8%E7%9B%B8%E4%BA%92%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%97%E3%81%BE%E3%81%9B%E3%82%93%E3%81%8B%EF%BC%9F%0A%E7%A7%81%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AEURL%E3%81%AF%E3%81%93%E3%81%A1%E3%82%89%E3%81%A7%E3%81%99%EF%BC%81%0Ahttps://example.com/"
+            className="flex cursor-pointer items-center gap-2 text-[#545454]"
+          >
+            <p>{t("MutualCta")}</p>
+            <MdChevronRight size={24} />
+          </a>
+        </div>
+
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+          {mutualSites.map((site) => (
+            <a
+              key={site.name}
+              href={site.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex min-h-16 items-center gap-3 rounded-2xl bg-neutral-100 px-4 py-3 text-neutral-900 transition-colors hover:bg-neutral-200/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-500 focus-visible:ring-offset-2"
+            >
+              <FiGlobe
+                aria-hidden="true"
+                className="size-4 shrink-0 text-neutral-500"
+              />
+
+              <p className="min-w-0 flex-1 truncate text-sm font-medium">
+                {site.name}
+              </p>
+
+              <FiArrowUpRight
+                aria-hidden="true"
+                className="size-4 shrink-0 text-neutral-500"
+              />
+            </a>
+          ))}
+        </div>
       </section>
     </div>
   );
