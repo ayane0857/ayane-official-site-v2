@@ -197,12 +197,12 @@ async function PortfolioContent({
           </h2>
           <ul className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
             {links.map(({ id, key, label, href }) => (
-              <li key={id}>
+              <li key={id} className="flex">
                 <a
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex min-h-36 items-center gap-4 rounded-3xl bg-neutral-100 p-5 text-neutral-900 transition-colors hover:bg-neutral-200/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900 sm:gap-5 sm:p-6"
+                  className="h-full w-full group flex min-h-36 items-center gap-4 rounded-3xl bg-neutral-100 p-5 text-neutral-900 transition-colors hover:bg-neutral-200/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900 sm:gap-5 sm:p-6"
                 >
                   <span className="flex size-14 shrink-0 items-center justify-center rounded-full bg-white">
                     {key === "github" ? (
