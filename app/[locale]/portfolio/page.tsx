@@ -52,7 +52,7 @@ export default function Portfolio() {
   const t = useTranslations("Portfolio");
 
   const sorted = [...portfolios].sort((a, b) =>
-    b.timestmp.localeCompare(a.timestmp),
+    b.timestamp.localeCompare(a.timestamp),
   );
 
   return (

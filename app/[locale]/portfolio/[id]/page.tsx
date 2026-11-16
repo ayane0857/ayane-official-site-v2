@@ -5,6 +5,8 @@ import {
   FiArrowUpRight,
   FiExternalLink,
   FiGithub,
+  FiChevronLeft,
+  FiChevronRight,
 } from "react-icons/fi";
 import { hasLocale } from "next-intl";
 import { getTranslations } from "next-intl/server";
@@ -12,8 +14,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
-import { portfolios } from "@/data/Portfolio";
-import { locale } from "next/root-params";
+import { portfolioLinks, portfolios } from "@/data/Portfolio";
 
 type Props = PageProps<"/[locale]/portfolio/[id]">;
 
@@ -66,13 +67,6 @@ export function generateStaticParams() {
   return portfolios.map((portfolio) => ({ id: String(portfolio.id) }));
 }
 
-const portfolioLinks = [
-  { key: "site", label: "Website" },
-  { key: "github", label: "GitHub" },
-  { key: "utaloader", label: "Utaloader" },
-  { key: "slides", label: "Slides" },
-] as const;
-
 export default function PortfolioDetail({
   params,
 }: PageProps<"/[locale]/portfolio/[id]">) {
@@ -109,13 +103,20 @@ async function PortfolioContent({
 
   if (!portfolio) notFound();
 
+  const portfolioIndex = portfolios.findIndex(
+    (item) => item.id === portfolio.id,
+  );
+  const nextPortfolio = portfolios[portfolioIndex + 1];
+  const previousPortfolio = portfolios[portfolioIndex - 1];
   const t = await getTranslations("Portfolio");
   const title = t(`${portfolio.id}.title`);
   const description = t(`${portfolio.id}.description`);
   const date = new Intl.DateTimeFormat(locale, {
     year: "numeric",
     month: "long",
-  }).format(new Date(`${portfolio.timestmp}T00:00:00`));
+    day: "numeric",
+    timeZone: "Asia/Tokyo",
+  }).format(new Date(`${portfolio.timestamp}T00:00:00+09:00`));
   const links = portfolioLinks.flatMap(({ key, label }) => {
     const value = portfolio.links[key];
     const hrefs = Array.isArray(value) ? value : value ? [value] : [];
@@ -123,9 +124,8 @@ async function PortfolioContent({
     return hrefs.map((href, index) => ({
       id: `${key}-${index}`,
       key,
-      label:
-        key === "site" && hrefs.length > 1 ? `${label} ${index + 1}` : label,
-      href,
+      label: href.title ?? label,
+      href: href.url,
     }));
   });
 
@@ -173,7 +173,7 @@ async function PortfolioContent({
         >
           {portfolio.links.image && (
             <Image
-              src={portfolio.links.image}
+              src={portfolio.links.image.url}
               alt={title}
               fill
               priority
@@ -233,6 +233,25 @@ async function PortfolioContent({
           </ul>
         </section>
       )}
+      <div className="flex items-center justify-center gap-16 px-4 sm:px-8 lg:px-16">
+        {nextPortfolio ? (
+          <Link href={`/portfolio/${nextPortfolio.id}`}>
+            <FiChevronLeft className="text-2xl md:text-3xl text-neutral-500" />
+          </Link>
+        ) : (
+          <div />
+        )}
+        <div className="text-xl md:text-2xl">
+          <p>{portfolio.id}</p>
+        </div>
+        {previousPortfolio ? (
+          <Link href={`/portfolio/${previousPortfolio.id}`}>
+            <FiChevronRight className="text-2xl md:text-3xl text-neutral-500" />
+          </Link>
+        ) : (
+          <div />
+        )}
+      </div>
     </main>
   );
 }

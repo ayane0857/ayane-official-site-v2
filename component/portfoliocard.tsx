@@ -19,7 +19,7 @@ export default function PortfolioCard({ portfolio, title, viewLabel }: Props) {
       className="group relative block aspect-[16/10] overflow-hidden rounded-3xl bg-neutral-900 shadow-sm outline-none transition-shadow hover:shadow-xl focus-visible:ring-2 focus-visible:ring-neutral-700 focus-visible:ring-offset-4"
     >
       <Image
-        src={links.image ?? "/images/no_image.jpg"}
+        src={links.image?.url ?? "/images/no_image.jpg"}
         alt={title}
         fill
         sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
