@@ -23,14 +23,14 @@ export type PortfolioItem = {
 };
 
 const items: PortfolioItem[] = [...portfolios]
-  .sort((a, b) => b.timestmp.localeCompare(a.timestmp))
+  .sort((a, b) => b.timestamp.localeCompare(a.timestamp))
   .slice(0, 7)
   .map((portfolio) => ({
     id: portfolio.id,
-    src: portfolio.links.image ?? "/images/no_image.jpg",
+    src: portfolio.links.image?.url ?? "/images/no_image.jpg",
     href: `/portfolio/${portfolio.id}`,
     tags: portfolio.tags,
-    date: portfolio.timestmp,
+    date: portfolio.timestamp,
     links: portfolio.links,
   }));
 

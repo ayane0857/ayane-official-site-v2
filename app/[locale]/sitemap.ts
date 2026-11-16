@@ -51,7 +51,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     ...portfolios.map((portfolio) => ({
       url: localizedUrl(`/portfolio/${portfolio.id}`, locale),
-      lastModified: new Date(`${portfolio.timestmp}T00:00:00.000Z`),
+      lastModified: new Date(`${portfolio.timestamp}T00:00:00+09:00`),
       changeFrequency: "yearly" as const,
       priority: 0.6,
       alternates: alternates(`/portfolio/${portfolio.id}`),
