@@ -28,7 +28,7 @@ export default function Header() {
       </Link>
       <div className="contents sm:flex sm:flex-col sm:items-end sm:gap-2">
         <nav className="col-span-2 justify-self-center sm:col-auto sm:justify-self-auto">
-          <ul className="flex items-center gap-3 sm:gap-6">
+          <ul className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 sm:gap-x-6 sm:gap-y-3">
             <li>
               <Link
                 href="/"
@@ -96,10 +96,7 @@ export default function Header() {
                           >
                             <span>{language.label}</span>
                             {isCurrentLanguage && (
-                              <FiCheck
-                                className="text-sm"
-                                aria-hidden="true"
-                              />
+                              <FiCheck className="text-sm" aria-hidden="true" />
                             )}
                           </Menu.Item>
                         );
