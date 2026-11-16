@@ -83,7 +83,7 @@ export default function About() {
     <div className="flex flex-col gap-12">
       <div className="flex flex-col gap-4 px-4 py-4 sm:px-8 lg:px-16">
         <h1 className="text-4xl font-bold sm:text-5xl">About</h1>
-        <p className="max-w-2xl whitespace-pre-line text-lg text-[#545454] sm:text-xl">
+        <p className="max-w-2xl whitespace-pre-line text-lg text-neutral-600 sm:text-xl">
           {t("AboutText")}
         </p>
       </div>
@@ -99,7 +99,7 @@ export default function About() {
           >
             {t("IntroTitle")}
           </h2>
-          <p className="max-w-xl whitespace-pre-line text-lg leading-8 text-[#545454] sm:text-xl">
+          <p className="max-w-xl whitespace-pre-line text-lg leading-8 text-neutral-600 sm:text-xl">
             {t("IntroText")}
           </p>
         </div>
@@ -140,9 +140,9 @@ export default function About() {
           {skills.map(({ category, items }) => (
             <div
               key={category}
-              className="flex flex-col gap-4 rounded-3xl bg-[#f1f1f1] p-7"
+              className="flex flex-col gap-4 rounded-3xl bg-neutral-100 p-7"
             >
-              <p className="text-xl text-[#545454]">{category}</p>
+              <p className="text-xl text-neutral-600">{category}</p>
               <ul className="flex flex-wrap gap-2">
                 {items.map((item) => (
                   <li key={item} className="rounded-full bg-white px-4 py-1">

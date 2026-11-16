@@ -9,6 +9,6 @@ export const config = {
   // their `.xml` suffix so next-intl can provide the requested locale.
   matcher: [
     "/((?!(?:api|trpc|_next|_vercel)(?:/|$)|.*\\..*).*)",
-    "/(ja|en)/sitemap.xml",
+    "/:locale/sitemap.xml",
   ],
 };

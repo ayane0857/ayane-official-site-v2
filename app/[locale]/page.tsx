@@ -72,21 +72,21 @@ export default function Home() {
         <div className="flex w-full max-w-2xl flex-col gap-6 md:gap-8">
           <div className="flex flex-col gap-2">
             <h1 className="text-4xl font-bold sm:text-5xl">Ayane</h1>
-            <span className="text-xl text-[#545454]">Student / Engineer</span>
+            <span className="text-xl text-neutral-600">Student / Engineer</span>
           </div>
           <h3 className="whitespace-pre-line text-lg sm:text-xl">
             {t("HeroText")}
           </h3>
           <div className="flex flex-col gap-4">
-            <p className="text-xl text-[#545454]">Tags</p>
+            <p className="text-xl text-neutral-600">Tags</p>
             <div className="flex flex-wrap items-center gap-2">
-              <span className="rounded-full bg-[#f1f1f1] px-4 py-1">
+              <span className="rounded-full bg-neutral-100 px-4 py-1">
                 #UniProject
               </span>
-              <span className="rounded-full bg-[#f1f1f1] px-4 py-1">
+              <span className="rounded-full bg-neutral-100 px-4 py-1">
                 #Next.js
               </span>
-              <span className="rounded-full bg-[#f1f1f1] px-4 py-1">
+              <span className="rounded-full bg-neutral-100 px-4 py-1">
                 #TypeScript
               </span>
             </div>
@@ -98,7 +98,7 @@ export default function Home() {
           <h2 className="text-2xl font-semibold sm:text-3xl">Portfolio</h2>
           <Link
             href="/portfolio"
-            className="flex cursor-pointer items-center gap-2 text-[#545454]"
+            className="flex cursor-pointer items-center gap-2 text-neutral-600"
           >
             <p>{t("ViewPortfolio")}</p>
             <MdChevronRight size={24} />
@@ -115,7 +115,7 @@ export default function Home() {
           <h2 className="text-2xl font-semibold sm:text-3xl">Mutual Link</h2>
           <a
             href="https://twitter.com/messages/compose?recipient_id=1818690132540899330&text=%E7%A7%81%E3%81%A8%E7%9B%B8%E4%BA%92%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%97%E3%81%BE%E3%81%9B%E3%82%93%E3%81%8B%EF%BC%9F%0A%E7%A7%81%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AEURL%E3%81%AF%E3%81%93%E3%81%A1%E3%82%89%E3%81%A7%E3%81%99%EF%BC%81%0Ahttps://example.com/"
-            className="flex cursor-pointer items-center gap-2 text-[#545454]"
+            className="flex cursor-pointer items-center gap-2 text-neutral-600"
           >
             <p>{t("MutualCta")}</p>
             <MdChevronRight size={24} />

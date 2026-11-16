@@ -77,7 +77,7 @@ export default function Contact() {
     <div className="flex flex-col gap-12">
       <div className="flex flex-col gap-4 px-4 py-4 sm:px-8 lg:px-16">
         <h1 className="text-4xl font-bold sm:text-5xl">Contact</h1>
-        <p className="max-w-2xl whitespace-pre-line text-lg text-[#545454] sm:text-xl">
+        <p className="max-w-2xl whitespace-pre-line text-lg text-neutral-600 sm:text-xl">
           {t("ContactText")}
         </p>
       </div>
@@ -87,7 +87,7 @@ export default function Contact() {
             {t("ChooseMethod")}
           </h2>
 
-          <p className="text-lg leading-relaxed text-[#545454] sm:text-xl">
+          <p className="text-lg leading-relaxed text-neutral-600 sm:text-xl">
             {t("MethodText")}
           </p>
         </header>

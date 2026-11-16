@@ -148,7 +148,7 @@ async function PortfolioContent({
             <h1 className="text-3xl font-bold tracking-tight text-neutral-950 sm:text-4xl lg:text-5xl">
               {title}
             </h1>
-            <p className="max-w-3xl whitespace-pre-line text-lg leading-relaxed text-[#545454] sm:text-xl">
+            <p className="max-w-3xl whitespace-pre-line text-lg leading-relaxed text-neutral-600 sm:text-xl">
               {description}
             </p>
           </div>
@@ -158,7 +158,7 @@ async function PortfolioContent({
               {portfolio.tags.map((tag) => (
                 <li
                   key={tag}
-                  className="rounded-full bg-[#f1f1f1] px-4 py-1.5 text-sm text-neutral-700"
+                  className="rounded-full bg-neutral-100 px-4 py-1.5 text-sm text-neutral-700"
                 >
                   {tag}
                 </li>

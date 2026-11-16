@@ -10,6 +10,7 @@ import { routing } from "@/i18n/routing";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import NextTopLoader from "nextjs-toploader";
 import { LINE_Seed_JP } from "next/font/google";
+import { languages as languageDefinitions } from "@/data/language";
 import "./globals.css";
 
 const LineFont = LINE_Seed_JP({ weight: "400" });
@@ -21,7 +22,7 @@ export function generateStaticParams() {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#e6c9ac",
+  themeColor: "#ffffff",
   width: "device-width",
   initialScale: 1.0,
 };
@@ -64,7 +65,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       type: "website",
       url: localizedUrl,
-      locale: locale === "ja" ? "ja_JP" : "en_US",
+      locale: languageDefinitions.find((language) => language.locale === locale)
+        ?.openGraphLocale,
       siteName: t("SiteName"),
       title: t("Title"),
       description: t("Description"),

@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 
-const linkClass = "text-lg text-[#222] underline-offset-2 hover:underline";
+const linkClass = "text-lg text-neutral-800 underline-offset-2 hover:underline";
 
 export async function CopyrightYear() {
   "use cache";
@@ -14,7 +14,7 @@ export default function Footer() {
   return (
     <footer
       role="contentinfo"
-      className="flex w-full flex-col gap-10 px-4 pt-12 pb-8 text-[#545454] sm:px-8 sm:pt-16 sm:pb-10"
+      className="flex w-full flex-col gap-10 px-4 pt-12 pb-8 text-neutral-600 sm:px-8 sm:pt-16 sm:pb-10"
     >
       <div className="flex flex-col justify-between gap-10 md:flex-row">
         <div>
@@ -28,7 +28,7 @@ export default function Footer() {
 
         <div className="flex gap-12 sm:gap-16 md:gap-24">
           <nav className="flex flex-col gap-4">
-            <p className="text-sm text-[#545454]">Pages</p>
+            <p className="text-sm text-neutral-600">Pages</p>
             <ul className="flex flex-col gap-4">
               <li>
                 <Link href="/" className={linkClass}>
@@ -49,7 +49,7 @@ export default function Footer() {
           </nav>
 
           <nav className="flex flex-col gap-4">
-            <p className="text-sm text-[#545454]">More</p>
+            <p className="text-sm text-neutral-600">More</p>
             <ul className="flex flex-col gap-4">
               <li>
                 <Link href="/contact" className={linkClass}>
@@ -61,7 +61,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="flex items-center gap-12 border-t border-[#CFCFCF] pt-10 text-base">
+      <div className="flex items-center gap-12 border-t border-neutral-300 pt-10 text-base">
         <p>
           © <CopyrightYear /> Ayane
         </p>
