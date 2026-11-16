@@ -4,7 +4,7 @@ import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
-import { FiArrowUpRight, FiGithub, FiMail, FiTwitter } from "react-icons/fi";
+import { FiArrowUpRight, FiGithub, FiMail, FiInstagram } from "react-icons/fi";
 
 type Props = PageProps<"/[locale]/contact">;
 
@@ -63,11 +63,11 @@ const contacts = [
     Icon: FiGithub,
   },
   {
-    name: "X",
-    account: "@ayane0857_",
-    descriptionKey: "XText",
-    href: "https://x.com/ayane0857_",
-    Icon: FiTwitter,
+    name: "Instagram",
+    account: "@ayane0857",
+    descriptionKey: "InstagramText",
+    href: "https://www.instagram.com/ayane0857/",
+    Icon: FiInstagram,
   },
 ];
 
