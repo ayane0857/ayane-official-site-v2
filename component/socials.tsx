@@ -125,7 +125,7 @@ function SocialCard({ social }: { social: Social }) {
         </div>
         <div>
           <p className="text-2xl leading-tight">{social.name}</p>
-          <p className="text-lg text-neutral-500">{social.handle}</p>
+          <p className="text-lg text-neutral-600">{social.handle}</p>
         </div>
       </a>
     );
@@ -141,7 +141,7 @@ function SocialCard({ social }: { social: Social }) {
       <SocialIcon social={social} className="size-14" />
       <div className="min-w-0 flex-1">
         <p className="text-xl leading-tight">{social.name}</p>
-        <p className="truncate text-lg text-neutral-500">{social.handle}</p>
+        <p className="truncate text-lg text-neutral-600">{social.handle}</p>
       </div>
       {arrow}
     </a>
