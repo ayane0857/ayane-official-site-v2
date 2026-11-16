@@ -235,7 +235,10 @@ async function PortfolioContent({
       )}
       <div className="flex items-center justify-center gap-16 px-4 sm:px-8 lg:px-16">
         {nextPortfolio ? (
-          <Link href={`/portfolio/${nextPortfolio.id}`}>
+          <Link
+            href={`/portfolio/${nextPortfolio.id}`}
+            aria-label={`Next portfolio: ${nextPortfolio.id}`}
+          >
             <FiChevronLeft className="text-2xl md:text-3xl text-neutral-500" />
           </Link>
         ) : (
@@ -245,7 +248,10 @@ async function PortfolioContent({
           <p>{portfolio.id}</p>
         </div>
         {previousPortfolio ? (
-          <Link href={`/portfolio/${previousPortfolio.id}`}>
+          <Link
+            href={`/portfolio/${previousPortfolio.id}`}
+            aria-label={`Previous portfolio: ${previousPortfolio.id}`}
+          >
             <FiChevronRight className="text-2xl md:text-3xl text-neutral-500" />
           </Link>
         ) : (
