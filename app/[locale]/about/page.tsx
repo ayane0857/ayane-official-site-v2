@@ -142,7 +142,7 @@ export default function About() {
               key={category}
               className="flex flex-col gap-4 rounded-3xl bg-neutral-100 p-7 dark:bg-zinc-700"
             >
-              <p className="text-xl text-neutral-600 dark:text-zinc-400">{category}</p>
+              <p className="text-xl text-neutral-600 dark:text-zinc-300">{category}</p>
               <ul className="flex flex-wrap gap-2">
                 {items.map((item) => (
                   <li key={item} className="rounded-full bg-white px-4 py-1 dark:bg-zinc-600">

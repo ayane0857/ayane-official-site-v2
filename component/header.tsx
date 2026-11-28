@@ -4,18 +4,24 @@ import { Menu } from "@base-ui/react/menu";
 import { useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { languages, locales, type LanguageLocale } from "@/data/language";
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import { useTheme } from "next-themes";
 import { FiCheck, FiChevronDown, FiGlobe, FiMoon, FiSun } from "react-icons/fi";
+
+const subscribeToMount = () => () => undefined;
+const getMountedSnapshot = () => true;
+const getServerMountedSnapshot = () => false;
 
 export default function Header() {
   const locale = useLocale();
   const currentLanguage =
     languages.find((language) => language.locale === locale) ?? languages[0];
   const { resolvedTheme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => setMounted(true), []);
+  const mounted = useSyncExternalStore(
+    subscribeToMount,
+    getMountedSnapshot,
+    getServerMountedSnapshot,
+  );
 
   const changeLanguage = (nextLocale: LanguageLocale) => {
     const pathname = window.location.pathname.replace(

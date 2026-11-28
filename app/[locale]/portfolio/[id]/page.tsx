@@ -219,7 +219,7 @@ async function PortfolioContent({
                   </span>
                   <span className="min-w-0 flex-1">
                     <span className="block text-xl leading-tight">{label}</span>
-                    <span className="mt-2 block break-all text-sm text-neutral-600 sm:text-base dark:text-zinc-400">
+                    <span className="mt-2 block break-all text-sm text-neutral-600 sm:text-base dark:text-zinc-300">
                       {href}
                     </span>
                   </span>

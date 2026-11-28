@@ -108,11 +108,11 @@ export default function Contact() {
               <span className="min-w-0 flex-1">
                 <span className="block text-xl leading-tight">{name}</span>
 
-                <span className="mt-1 block break-all text-base text-neutral-600 sm:text-lg dark:text-zinc-400">
+                <span className="mt-1 block break-all text-base text-neutral-600 sm:text-lg dark:text-zinc-300">
                   {account}
                 </span>
 
-                <span className="mt-3 block text-sm leading-relaxed text-neutral-600 sm:text-base dark:text-zinc-400">
+                <span className="mt-3 block text-sm leading-relaxed text-neutral-600 sm:text-base dark:text-zinc-300">
                   {t(descriptionKey)}
                 </span>
               </span>
