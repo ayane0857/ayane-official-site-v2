@@ -18,7 +18,7 @@ type Social = {
   iconSrc?: string;
 };
 
-const iconClass = "size-9 text-neutral-900";
+const iconClass = "size-9 text-neutral-900 dark:text-zinc-100";
 
 const socials: Social[] = [
   {
@@ -53,7 +53,7 @@ const socials: Social[] = [
         alt="icon"
         width={24}
         height={24}
-        className="brightness-0"
+        className="brightness-0 dark:invert"
       />
     ),
   },
@@ -68,7 +68,7 @@ const socials: Social[] = [
         alt="icon"
         width={24}
         height={24}
-        className="brightness-0"
+        className="brightness-0 dark:invert"
       />
     ),
   },
@@ -90,7 +90,7 @@ function SocialIcon({
 }) {
   return (
     <Avatar.Root
-      className={`inline-flex shrink-0 items-center justify-center overflow-hidden rounded-full bg-white ${className}`}
+      className={`inline-flex shrink-0 items-center justify-center overflow-hidden rounded-full bg-white dark:bg-zinc-600 ${className}`}
     >
       <Avatar.Fallback className="flex items-center justify-center">
         {social.icon ?? (
@@ -103,11 +103,11 @@ function SocialIcon({
 
 function SocialCard({ social }: { social: Social }) {
   const base =
-    "group relative rounded-3xl bg-neutral-100 p-6 text-neutral-900 transition-colors hover:bg-neutral-200/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900";
+    "group relative rounded-3xl bg-neutral-100 p-6 text-neutral-900 transition-colors light:hover:bg-neutral-200/70 focus-visible:outline-2 focus-visible:outline-offset-2 light:focus-visible:outline-neutral-900 dark:bg-zinc-700 dark:text-zinc-100 dark:hover:bg-zinc-600 dark:focus-visible:outline-zinc-300";
   const arrow = (
     <FiArrowUpRight
       aria-hidden
-      className="size-6 shrink-0 text-neutral-500 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+      className="size-6 shrink-0 text-neutral-500 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 dark:text-zinc-400"
     />
   );
 
@@ -125,7 +125,7 @@ function SocialCard({ social }: { social: Social }) {
         </div>
         <div>
           <p className="text-2xl leading-tight">{social.name}</p>
-          <p className="text-lg text-neutral-600">{social.handle}</p>
+          <p className="text-lg text-neutral-600 dark:text-zinc-400">{social.handle}</p>
         </div>
       </a>
     );
@@ -141,7 +141,7 @@ function SocialCard({ social }: { social: Social }) {
       <SocialIcon social={social} className="size-14" />
       <div className="min-w-0 flex-1">
         <p className="text-xl leading-tight">{social.name}</p>
-        <p className="truncate text-lg text-neutral-600">{social.handle}</p>
+        <p className="truncate text-lg text-neutral-600 dark:text-zinc-400">{social.handle}</p>
       </div>
       {arrow}
     </a>

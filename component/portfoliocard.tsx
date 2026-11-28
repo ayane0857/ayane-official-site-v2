@@ -25,7 +25,7 @@ const MAX_TAGS_FEATURED = 5;
 const FALLBACK_IMAGE = "/images/no_image.jpg";
 
 const focusRing =
-  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900 focus-visible:ring-offset-4 dark:focus-visible:ring-white dark:focus-visible:ring-offset-neutral-950";
+  "focus-visible:outline-none focus-visible:ring-2 light:focus-visible:ring-neutral-900 focus-visible:ring-offset-4 dark:focus-visible:ring-zinc-300 dark:focus-visible:ring-offset-zinc-800";
 
 export default function PortfolioCard({
   portfolio,
@@ -55,13 +55,13 @@ export default function PortfolioCard({
         {visibleTags.map((tag) => (
           <li
             key={tag}
-            className="rounded-md bg-neutral-100 px-2 py-0.5 text-xs text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300"
+            className="rounded-md bg-neutral-100 px-2 py-0.5 text-xs text-neutral-700 dark:bg-zinc-800 dark:text-zinc-300"
           >
             {tag}
           </li>
         ))}
         {restCount > 0 && (
-          <li className="px-1 text-xs text-neutral-500 dark:text-neutral-400">
+          <li className="px-1 text-xs text-neutral-500 dark:text-zinc-400">
             +{restCount}
           </li>
         )}
@@ -76,7 +76,7 @@ export default function PortfolioCard({
       <Link
         href={`/portfolio/${portfolio.id}`}
         aria-label={`${title} — ${viewLabel}`}
-        className={`group relative flex min-h-[26rem] items-end overflow-hidden rounded-3xl bg-neutral-200 p-4 sm:min-h-[30rem] sm:p-6 lg:min-h-[34rem] lg:p-8 dark:bg-neutral-800 ${focusRing}`}
+        className={`group relative flex min-h-[26rem] items-end overflow-hidden rounded-3xl bg-neutral-200 p-4 sm:min-h-[30rem] sm:p-6 lg:min-h-[34rem] lg:p-8 dark:bg-zinc-700 ${focusRing}`}
       >
         <Image
           src={imgSrc}
@@ -85,42 +85,42 @@ export default function PortfolioCard({
           priority
           sizes="(min-width: 1024px) 80vw, 100vw"
           onError={() => setFailedUrl(sourceUrl)}
-          className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+          className="scale-100 object-contain transition-transform duration-700 ease-out group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
         />
 
         {formattedIndex && (
-          <span className="absolute top-4 left-4 rounded-full bg-white px-3 py-1 text-sm font-semibold text-neutral-900 tabular-nums sm:top-6 sm:left-6 dark:bg-neutral-900 dark:text-white">
+          <span className="absolute top-4 left-4 rounded-full bg-white px-3 py-1 text-sm font-semibold text-neutral-900 tabular-nums sm:top-6 sm:left-6 dark:bg-zinc-900 dark:text-zinc-100">
             {formattedIndex}
           </span>
         )}
 
         {/* 情報パネル */}
-        <div className="relative z-10 flex w-full flex-col gap-4 rounded-2xl bg-white p-5 shadow-xl sm:max-w-md sm:p-6 dark:bg-neutral-900">
+        <div className="relative z-10 flex w-full flex-col gap-4 rounded-2xl bg-white p-5 shadow-xl sm:max-w-md sm:p-6 dark:bg-zinc-900">
           {meta && (
-            <p className="text-sm text-neutral-500 dark:text-neutral-400">
+            <p className="text-sm text-neutral-500 dark:text-zinc-400">
               {meta}
             </p>
           )}
 
-          <h2 className="text-2xl font-bold leading-snug tracking-tight text-neutral-900 sm:text-3xl dark:text-white">
+          <h2 className="text-2xl font-bold leading-snug tracking-tight text-neutral-900 sm:text-3xl dark:text-zinc-100">
             {title}
           </h2>
 
           {description && (
-            <p className="line-clamp-3 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            <p className="line-clamp-3 text-sm leading-relaxed text-neutral-600 dark:text-zinc-300">
               {description}
             </p>
           )}
 
           {tagList}
 
-          <div className="flex items-center justify-between border-t border-neutral-200 pt-4 dark:border-neutral-800">
-            <span className="text-sm font-semibold text-neutral-900 dark:text-white">
+          <div className="flex items-center justify-between border-t border-neutral-200 pt-4 dark:border-zinc-800">
+            <span className="text-sm font-semibold text-neutral-900 dark:text-zinc-100">
               {viewLabel}
             </span>
             <span
               aria-hidden
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-900 text-white transition-transform duration-300 group-hover:rotate-45 motion-reduce:transition-none motion-reduce:group-hover:rotate-0 dark:bg-white dark:text-neutral-900"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-900 text-white transition-transform duration-300 group-hover:rotate-45 motion-reduce:transition-none motion-reduce:group-hover:rotate-0 dark:bg-zinc-700 dark:text-zinc-100"
             >
               <FiArrowUpRight size={18} />
             </span>
@@ -139,17 +139,17 @@ export default function PortfolioCard({
       aria-label={`${title} — ${viewLabel}`}
       className={`group flex flex-col gap-4 rounded-2xl ${focusRing}`}
     >
-      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-neutral-100 dark:bg-neutral-800">
+      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-neutral-100 dark:bg-zinc-700">
         <Image
           src={imgSrc}
           alt=""
           fill
           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
           onError={() => setFailedUrl(sourceUrl)}
-          className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+          className="scale-100 object-contain transition-transform duration-500 ease-out group-hover:scale-[1.04] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
         />
         {formattedIndex && (
-          <span className="absolute top-3 left-3 rounded-full bg-white/95 px-2.5 py-0.5 text-xs font-semibold text-neutral-900 tabular-nums dark:bg-neutral-900/95 dark:text-white">
+          <span className="absolute top-3 left-3 rounded-full bg-white/95 px-2.5 py-0.5 text-xs font-semibold text-neutral-900 tabular-nums dark:bg-zinc-900/95 dark:text-zinc-100">
             {formattedIndex}
           </span>
         )}
@@ -158,11 +158,11 @@ export default function PortfolioCard({
       <div className="flex flex-1 flex-col gap-3">
         <div className="flex items-start gap-3">
           <div className="min-w-0 flex-1">
-            <h2 className="line-clamp-2 text-lg font-bold leading-snug tracking-tight text-neutral-900 dark:text-neutral-100">
+            <h2 className="line-clamp-2 text-lg font-bold leading-snug tracking-tight text-neutral-900 dark:text-zinc-100">
               {title}
             </h2>
             {meta && (
-              <p className="mt-1 truncate text-sm text-neutral-500 dark:text-neutral-400">
+              <p className="mt-1 truncate text-sm text-neutral-500 dark:text-zinc-400">
                 {meta}
               </p>
             )}
@@ -170,14 +170,14 @@ export default function PortfolioCard({
 
           <span
             aria-hidden
-            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-neutral-300 text-neutral-700 transition-colors duration-300 group-hover:border-neutral-900 group-hover:bg-neutral-900 group-hover:text-white motion-reduce:transition-none dark:border-neutral-700 dark:text-neutral-300 dark:group-hover:border-white dark:group-hover:bg-white dark:group-hover:text-neutral-900"
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-neutral-300 text-neutral-700 transition-colors duration-300 light:group-hover:border-neutral-500 light:group-hover:bg-neutral-100 light:group-hover:text-neutral-900 motion-reduce:transition-none dark:border-zinc-700 dark:text-zinc-300 dark:group-hover:border-zinc-300 dark:group-hover:bg-zinc-700 dark:group-hover:text-zinc-100"
           >
             <FiArrowUpRight size={16} />
           </span>
         </div>
 
         {description && (
-          <p className="line-clamp-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
+          <p className="line-clamp-2 text-sm leading-relaxed text-neutral-600 dark:text-zinc-400">
             {description}
           </p>
         )}

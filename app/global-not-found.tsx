@@ -5,6 +5,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import Header from "@/component/header";
 import Footer from "@/component/footer";
+import ThemeProvider from "@/component/theme-provider";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import "./[locale]/globals.css";
@@ -38,16 +39,16 @@ async function LocalizedNotFound({ locale }: { locale: Locale }) {
       <NextIntlClientProvider locale={locale} messages={messages}>
         <Header />
         <main className="flex min-h-[45vh] flex-col items-center justify-center gap-4 px-4 text-center">
-          <p className="text-sm font-semibold tracking-[0.2em] text-neutral-500">
+          <p className="text-sm font-semibold tracking-[0.2em] text-neutral-500 dark:text-zinc-400">
             404
           </p>
           <h1 className="text-3xl font-bold sm:text-4xl">{t("Title")}</h1>
-          <p className="max-w-lg text-base leading-relaxed text-neutral-600 sm:text-lg">
+          <p className="max-w-lg text-base leading-relaxed text-neutral-600 sm:text-lg dark:text-zinc-400">
             {t("Description")}
           </p>
           <Link
             href="/"
-            className="mt-3 rounded-full bg-neutral-900 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-neutral-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900"
+            className="mt-3 rounded-full bg-neutral-900 px-5 py-2.5 text-sm font-medium text-white transition-colors light:hover:bg-neutral-700 focus-visible:outline-2 focus-visible:outline-offset-2 light:focus-visible:outline-neutral-900 dark:bg-zinc-700 dark:text-zinc-100 dark:hover:bg-zinc-600 dark:focus-visible:outline-zinc-300"
           >
             {t("ReturnHome")}
           </Link>
@@ -62,11 +63,13 @@ export default async function GlobalNotFound() {
   const locale = await getNotFoundLocale();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body>
-        <Suspense fallback={null}>
-          <LocalizedNotFound locale={locale} />
-        </Suspense>
+        <ThemeProvider>
+          <Suspense fallback={null}>
+            <LocalizedNotFound locale={locale} />
+          </Suspense>
+        </ThemeProvider>
       </body>
     </html>
   );

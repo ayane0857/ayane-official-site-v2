@@ -75,7 +75,7 @@ export default function PortfolioSlider() {
             <Link
               href={item.href}
               aria-label={`${t(`${item.id}.title`)} — ${t("View")}`}
-              className="group relative block aspect-video overflow-hidden rounded-xl bg-neutral-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-neutral-700"
+              className="group relative block aspect-video overflow-hidden rounded-xl bg-neutral-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 light:focus-visible:outline-neutral-700 dark:bg-zinc-700 dark:focus-visible:outline-zinc-300"
             >
               <Image
                 src={item.src}
@@ -96,7 +96,7 @@ export default function PortfolioSlider() {
       {/* 右端の白い靄 */}
       <div
         aria-hidden="true"
-        className={`pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-white via-white/70 to-transparent transition-opacity duration-300 ${visibilityClass}`}
+        className={`pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-white via-white/70 to-transparent transition-opacity duration-300 dark:from-zinc-800 dark:via-zinc-800/70 ${visibilityClass}`}
       />
 
       {/* 次へボタン */}
@@ -106,7 +106,7 @@ export default function PortfolioSlider() {
         disabled={!canSlideNext}
         tabIndex={canSlideNext ? 0 : -1}
         aria-label="次の作品を見る"
-        className={`absolute right-4 top-1/2 z-20 hidden size-12 -translate-y-1/2 place-items-center rounded-full bg-white/90 text-neutral-800 shadow-md ring-1 ring-black/5 transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-700 disabled:cursor-default md:grid ${visibilityClass}`}
+        className={`absolute right-4 top-1/2 z-20 hidden size-12 -translate-y-1/2 place-items-center rounded-full bg-white/90 text-neutral-800 shadow-md ring-1 ring-black/5 transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 light:focus-visible:outline-neutral-700 disabled:cursor-default md:grid dark:bg-zinc-700/90 dark:text-zinc-100 dark:focus-visible:outline-zinc-300 ${visibilityClass}`}
       >
         <MdChevronRight className="size-6" />
       </Button>

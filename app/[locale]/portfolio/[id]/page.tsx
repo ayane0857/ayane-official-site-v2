@@ -80,14 +80,14 @@ export default function PortfolioDetail({
 function PortfolioDetailFallback() {
   return (
     <main className="flex flex-col gap-10 px-4 pb-12 sm:gap-14 sm:px-8 sm:pb-16 lg:px-16">
-      <div className="h-8 w-28 animate-pulse rounded-full bg-neutral-100" />
+      <div className="h-8 w-28 animate-pulse rounded-full bg-neutral-100 dark:bg-zinc-700" />
       <div className="grid items-center gap-8 md:grid-cols-[minmax(0,1fr)_minmax(200px,0.42fr)] lg:gap-14">
         <div className="flex flex-col gap-4">
-          <div className="h-4 w-24 animate-pulse rounded bg-neutral-100" />
-          <div className="h-10 w-3/4 animate-pulse rounded bg-neutral-100" />
-          <div className="h-20 max-w-xl animate-pulse rounded bg-neutral-100" />
+          <div className="h-4 w-24 animate-pulse rounded bg-neutral-100 dark:bg-zinc-700" />
+          <div className="h-10 w-3/4 animate-pulse rounded bg-neutral-100 dark:bg-zinc-700" />
+          <div className="h-20 max-w-xl animate-pulse rounded bg-neutral-100 dark:bg-zinc-700" />
         </div>
-        <div className="aspect-[16/10] w-full max-w-xs animate-pulse rounded-3xl bg-neutral-100 md:max-w-sm" />
+        <div className="aspect-[16/10] w-full max-w-xs animate-pulse rounded-3xl bg-neutral-100 md:max-w-sm dark:bg-zinc-700" />
       </div>
     </main>
   );
@@ -134,7 +134,7 @@ async function PortfolioContent({
       <div className="px-4 pt-2 sm:px-8 lg:px-16">
         <Link
           href="/portfolio"
-          className="inline-flex items-center gap-2 rounded-full bg-neutral-100 px-4 py-2 text-sm text-neutral-700 transition-colors hover:bg-neutral-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900"
+          className="inline-flex items-center gap-2 rounded-full bg-neutral-100 px-4 py-2 text-sm text-neutral-700 transition-colors light:hover:bg-neutral-200 focus-visible:outline-2 focus-visible:outline-offset-2 light:focus-visible:outline-neutral-900 dark:bg-zinc-700 dark:text-zinc-200 dark:hover:bg-zinc-600 dark:focus-visible:outline-zinc-300"
         >
           <FiArrowLeft aria-hidden="true" />
           Portfolio
@@ -144,11 +144,11 @@ async function PortfolioContent({
       <section className="grid items-center gap-8 px-4 sm:px-8 md:grid-cols-[minmax(0,1fr)_minmax(200px,0.42fr)] lg:gap-14 lg:px-16">
         <header className="flex min-w-0 flex-col gap-6">
           <div className="flex flex-col gap-4">
-            <p className="text-sm font-medium text-neutral-500">{date}</p>
-            <h1 className="text-3xl font-bold tracking-tight text-neutral-950 sm:text-4xl lg:text-5xl">
+            <p className="text-sm font-medium text-neutral-500 dark:text-zinc-400">{date}</p>
+            <h1 className="text-3xl font-bold tracking-tight text-neutral-950 sm:text-4xl lg:text-5xl dark:text-zinc-100">
               {title}
             </h1>
-            <p className="max-w-3xl whitespace-pre-line text-lg leading-relaxed text-neutral-600 sm:text-xl">
+            <p className="max-w-3xl whitespace-pre-line text-lg leading-relaxed text-neutral-600 sm:text-xl dark:text-zinc-400">
               {description}
             </p>
           </div>
@@ -158,7 +158,7 @@ async function PortfolioContent({
               {portfolio.tags.map((tag) => (
                 <li
                   key={tag}
-                  className="rounded-full bg-neutral-100 px-4 py-1.5 text-sm text-neutral-700"
+                  className="rounded-full bg-neutral-100 px-4 py-1.5 text-sm text-neutral-700 dark:bg-zinc-700 dark:text-zinc-200"
                 >
                   {tag}
                 </li>
@@ -202,30 +202,30 @@ async function PortfolioContent({
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="h-full w-full group flex min-h-36 items-center gap-4 rounded-3xl bg-neutral-100 p-5 text-neutral-900 transition-colors hover:bg-neutral-200/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900 sm:gap-5 sm:p-6"
+                  className="h-full w-full group flex min-h-36 items-center gap-4 rounded-3xl bg-neutral-100 p-5 text-neutral-900 transition-colors light:hover:bg-neutral-200/70 focus-visible:outline-2 focus-visible:outline-offset-2 light:focus-visible:outline-neutral-900 sm:gap-5 sm:p-6 dark:bg-zinc-700 dark:text-zinc-100 dark:hover:bg-zinc-600 dark:focus-visible:outline-zinc-300"
                 >
-                  <span className="flex size-14 shrink-0 items-center justify-center rounded-full bg-white">
+                  <span className="flex size-14 shrink-0 items-center justify-center rounded-full bg-white dark:bg-zinc-600">
                     {key === "github" ? (
                       <FiGithub
                         aria-hidden="true"
-                        className="size-7 text-neutral-900 sm:size-9"
+                        className="size-7 text-neutral-900 sm:size-9 dark:text-zinc-100"
                       />
                     ) : (
                       <FiExternalLink
                         aria-hidden="true"
-                        className="size-7 text-neutral-900 sm:size-9"
+                        className="size-7 text-neutral-900 sm:size-9 dark:text-zinc-100"
                       />
                     )}
                   </span>
                   <span className="min-w-0 flex-1">
                     <span className="block text-xl leading-tight">{label}</span>
-                    <span className="mt-2 block break-all text-sm text-neutral-600 sm:text-base">
+                    <span className="mt-2 block break-all text-sm text-neutral-600 sm:text-base dark:text-zinc-400">
                       {href}
                     </span>
                   </span>
                   <FiArrowUpRight
                     aria-hidden="true"
-                    className="size-6 shrink-0 text-neutral-500 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                    className="size-6 shrink-0 text-neutral-500 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 dark:text-zinc-400"
                   />
                 </a>
               </li>
@@ -239,7 +239,7 @@ async function PortfolioContent({
             href={`/portfolio/${nextPortfolio.id}`}
             aria-label={`Next portfolio: ${nextPortfolio.id}`}
           >
-            <FiChevronLeft className="text-2xl md:text-3xl text-neutral-500" />
+            <FiChevronLeft className="text-2xl md:text-3xl text-neutral-500 dark:text-zinc-400" />
           </Link>
         ) : (
           <div />
@@ -252,7 +252,7 @@ async function PortfolioContent({
             href={`/portfolio/${previousPortfolio.id}`}
             aria-label={`Previous portfolio: ${previousPortfolio.id}`}
           >
-            <FiChevronRight className="text-2xl md:text-3xl text-neutral-500" />
+            <FiChevronRight className="text-2xl md:text-3xl text-neutral-500 dark:text-zinc-400" />
           </Link>
         ) : (
           <div />
