@@ -79,7 +79,7 @@ export default function Header() {
         <Menu.Root>
           <Menu.Trigger
             aria-label="Change language"
-            className="group flex h-9 touch-manipulation cursor-pointer items-center gap-1.5 rounded-full border border-neutral-100 px-3 text-sm font-medium tracking-wide text-neutral-900 transition-[background-color,border-color,color,transform] light:hover:border-neutral-300 light:hover:bg-neutral-100 light:hover:text-neutral-800 focus-visible:outline-2 focus-visible:outline-offset-2 light:focus-visible:outline-neutral-900 sm:h-10 sm:px-3.5 dark:border-zinc-800 dark:text-zinc-100 dark:hover:border-zinc-300 dark:hover:bg-zinc-700 dark:hover:text-zinc-100 dark:focus-visible:outline-zinc-300"
+            className="group flex h-9 touch-manipulation cursor-pointer items-center gap-1.5 rounded-full border border-neutral-100 px-3 text-sm font-medium tracking-wide text-neutral-900 transition-[background-color,border-color,color,transform] light:hover:border-neutral-300 light:hover:bg-neutral-100 light:hover:text-neutral-800 focus-visible:outline-2 focus-visible:outline-offset-2 light:focus-visible:outline-neutral-900 sm:h-10 sm:px-3.5 dark:border-zinc-700 dark:text-zinc-200 dark:hover:bg-zinc-700 dark:focus-visible:outline-zinc-300"
           >
             <FiGlobe className="text-base" aria-hidden="true" />
             <span>{currentLanguage.shortLabel}</span>

@@ -12,6 +12,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import NextTopLoader from "nextjs-toploader";
 import { LINE_Seed_JP } from "next/font/google";
 import { languages as languageDefinitions } from "@/data/language";
+import { canonicalBaseUrl, siteUrl } from "@/data/site";
 import "./globals.css";
 
 const LineFont = LINE_Seed_JP({ weight: "400" });
@@ -36,12 +37,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   const t = await getTranslations({ locale, namespace: "Metadata" });
-  const siteUrl = "https://ayane0857.net";
-  const localizedUrl = `${siteUrl}/`;
+  const localizedUrl = `${canonicalBaseUrl}/${locale}`;
   const languages = Object.fromEntries(
     routing.locales.map((supportedLocale) => [
       supportedLocale,
-      `${siteUrl}/${supportedLocale}`,
+      `${canonicalBaseUrl}/${supportedLocale}`,
     ]),
   );
 
