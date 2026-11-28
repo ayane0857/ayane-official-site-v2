@@ -39,8 +39,8 @@ importers:
         specifier: ^5.7.0
         version: 5.7.0(react@19.3.1)
       swiper:
-        specifier: ^14.4.0
-        version: 14.4.0
+        specifier: ^14.5.0
+        version: 14.5.0
     devDependencies:
       '@tailwindcss/turbopack':
         specifier: ^4.3.5
@@ -2290,8 +2290,8 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  swiper@14.4.0:
-    resolution: {integrity: sha512-6axnAuBsttFJe0gwsM5tT203/Bts0vcI+FwIX6dqFE4pUFVW6qrdRprNFQVxOYMW7V0S6A/KIqJ6JaPpNN2MCw==}
+  swiper@14.5.0:
+    resolution: {integrity: sha512-d4fR/Dj27KfLksSpz9/Ji2PdZJZZPTLBP83vZGHfJEDuWBt8EPXMpy9aM7KEEE+oSWR7T2i7lfrgJMdaox8WSg==}
     engines: {node: '>= 4.7.0'}
 
   tailwindcss@4.3.5:
@@ -4698,7 +4698,7 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  swiper@14.4.0: {}
+  swiper@14.5.0: {}
 
   tailwindcss@4.3.5: {}
 
