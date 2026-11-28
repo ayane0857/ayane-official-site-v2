@@ -8,7 +8,7 @@ import ThemeProvider from "@/component/theme-provider";
 import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import NextTopLoader from "nextjs-toploader";
 import { LINE_Seed_JP } from "next/font/google";
 import { languages as languageDefinitions } from "@/data/language";
@@ -115,6 +115,7 @@ export default async function LocaleLayout({ children, params }: Props) {
             </Suspense>
           </NextIntlClientProvider>
           <GoogleAnalytics gaId="G-XN8KR4DZ8E" />
+          <GoogleTagManager gtmId="GTM-P2F8VB74" />
         </ThemeProvider>
       </body>
     </html>
