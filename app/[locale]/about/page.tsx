@@ -83,7 +83,7 @@ export default function About() {
     <div className="flex flex-col gap-12">
       <div className="flex flex-col gap-4 px-4 py-4 sm:px-8 lg:px-16">
         <h1 className="text-4xl font-bold sm:text-5xl">About</h1>
-        <p className="max-w-2xl whitespace-pre-line text-lg text-neutral-600 sm:text-xl">
+        <p className="max-w-2xl whitespace-pre-line text-lg text-neutral-600 sm:text-xl dark:text-zinc-400">
           {t("AboutText")}
         </p>
       </div>
@@ -99,7 +99,7 @@ export default function About() {
           >
             {t("IntroTitle")}
           </h2>
-          <p className="max-w-xl whitespace-pre-line text-lg leading-8 text-neutral-600 sm:text-xl">
+          <p className="max-w-xl whitespace-pre-line text-lg leading-8 text-neutral-600 sm:text-xl dark:text-zinc-400">
             {t("IntroText")}
           </p>
         </div>
@@ -121,12 +121,12 @@ export default function About() {
               {profile.map((line, index) => (
                 <span className="block whitespace-pre" key={line}>
                   <span
-                    className="mr-6 inline-block w-4 select-none text-right text-neutral-600"
+                    className="mr-6 inline-block w-4 select-none text-right text-neutral-600 dark:text-zinc-500"
                     aria-hidden="true"
                   >
                     {index + 1}
                   </span>
-                  <span className="text-neutral-200">{line}</span>
+                  <span className="text-neutral-200 dark:text-zinc-200">{line}</span>
                 </span>
               ))}
             </code>
@@ -140,12 +140,12 @@ export default function About() {
           {skills.map(({ category, items }) => (
             <div
               key={category}
-              className="flex flex-col gap-4 rounded-3xl bg-neutral-100 p-7"
+              className="flex flex-col gap-4 rounded-3xl bg-neutral-100 p-7 dark:bg-zinc-700"
             >
-              <p className="text-xl text-neutral-600">{category}</p>
+              <p className="text-xl text-neutral-600 dark:text-zinc-300">{category}</p>
               <ul className="flex flex-wrap gap-2">
                 {items.map((item) => (
-                  <li key={item} className="rounded-full bg-white px-4 py-1">
+                  <li key={item} className="rounded-full bg-white px-4 py-1 dark:bg-zinc-600">
                     {item}
                   </li>
                 ))}

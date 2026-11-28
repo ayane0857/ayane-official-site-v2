@@ -4,6 +4,7 @@ import { hasLocale } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import Header from "@/component/header";
 import Footer from "@/component/footer";
+import ThemeProvider from "@/component/theme-provider";
 import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
@@ -96,23 +97,25 @@ export default async function LocaleLayout({ children, params }: Props) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body
         className={`flex min-h-screen flex-col root gap-12 ${LineFont.className}`}
       >
-        <NextTopLoader height={2} showSpinner={false} />
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <Suspense fallback={null}>
-            <Header />
-          </Suspense>
-          <div role="main" className="flex-1">
-            {children}
-          </div>
-          <Suspense fallback={null}>
-            <Footer />
-          </Suspense>
-        </NextIntlClientProvider>
-        <GoogleAnalytics gaId="G-XN8KR4DZ8E" />
+        <ThemeProvider>
+          <NextTopLoader height={2} showSpinner={false} />
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <Suspense fallback={null}>
+              <Header />
+            </Suspense>
+            <div role="main" className="flex-1">
+              {children}
+            </div>
+            <Suspense fallback={null}>
+              <Footer />
+            </Suspense>
+          </NextIntlClientProvider>
+          <GoogleAnalytics gaId="G-XN8KR4DZ8E" />
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -72,21 +72,21 @@ export default function Home() {
         <div className="flex w-full max-w-2xl flex-col gap-6 md:gap-8">
           <div className="flex flex-col gap-2">
             <h1 className="text-4xl font-bold sm:text-5xl">Ayane</h1>
-            <span className="text-xl text-neutral-600">Student / Engineer</span>
+            <span className="text-xl text-neutral-600 dark:text-zinc-400">Student / Engineer</span>
           </div>
           <h3 className="whitespace-pre-line text-lg sm:text-xl">
             {t("HeroText")}
           </h3>
           <div className="flex flex-col gap-4">
-            <p className="text-xl text-neutral-600">Tags</p>
+            <p className="text-xl text-neutral-600 dark:text-zinc-400">Tags</p>
             <div className="flex flex-wrap items-center gap-2">
-              <span className="rounded-full bg-neutral-100 px-4 py-1">
+              <span className="rounded-full bg-neutral-100 px-4 py-1 dark:bg-zinc-700">
                 #UniProject
               </span>
-              <span className="rounded-full bg-neutral-100 px-4 py-1">
+              <span className="rounded-full bg-neutral-100 px-4 py-1 dark:bg-zinc-700">
                 #Next.js
               </span>
-              <span className="rounded-full bg-neutral-100 px-4 py-1">
+              <span className="rounded-full bg-neutral-100 px-4 py-1 dark:bg-zinc-700">
                 #TypeScript
               </span>
             </div>
@@ -98,7 +98,7 @@ export default function Home() {
           <h2 className="text-2xl font-semibold sm:text-3xl">Portfolio</h2>
           <Link
             href="/portfolio"
-            className="flex cursor-pointer items-center gap-2 text-neutral-600"
+            className="flex cursor-pointer items-center gap-2 text-neutral-600 dark:text-zinc-400"
           >
             <p>{t("ViewPortfolio")}</p>
             <MdChevronRight size={24} />
@@ -115,7 +115,7 @@ export default function Home() {
           <h2 className="text-2xl font-semibold sm:text-3xl">Mutual Link</h2>
           <a
             href="https://twitter.com/messages/compose?recipient_id=1818690132540899330&text=%E7%A7%81%E3%81%A8%E7%9B%B8%E4%BA%92%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%97%E3%81%BE%E3%81%9B%E3%82%93%E3%81%8B%EF%BC%9F%0A%E7%A7%81%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AEURL%E3%81%AF%E3%81%93%E3%81%A1%E3%82%89%E3%81%A7%E3%81%99%EF%BC%81%0Ahttps://example.com/"
-            className="flex cursor-pointer items-center gap-2 text-neutral-600"
+            className="flex cursor-pointer items-center gap-2 text-neutral-600 dark:text-zinc-400"
           >
             <p>{t("MutualCta")}</p>
             <MdChevronRight size={24} />
@@ -129,11 +129,11 @@ export default function Home() {
               href={site.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex min-h-16 items-center gap-3 rounded-2xl bg-neutral-100 px-4 py-3 text-neutral-900 transition-colors hover:bg-neutral-200/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-500 focus-visible:ring-offset-2"
+              className="flex min-h-16 items-center gap-3 rounded-2xl bg-neutral-100 px-4 py-3 text-neutral-900 transition-colors light:hover:bg-neutral-200/70 focus-visible:outline-none focus-visible:ring-2 light:focus-visible:ring-neutral-500 focus-visible:ring-offset-2 dark:bg-zinc-700 dark:text-zinc-100 dark:hover:bg-zinc-600 dark:focus-visible:ring-offset-zinc-800"
             >
               <FiGlobe
                 aria-hidden="true"
-                className="size-4 shrink-0 text-neutral-500"
+                className="size-4 shrink-0 text-neutral-500 dark:text-zinc-400"
               />
 
               <p className="min-w-0 flex-1 truncate text-sm font-medium">
@@ -142,7 +142,7 @@ export default function Home() {
 
               <FiArrowUpRight
                 aria-hidden="true"
-                className="size-4 shrink-0 text-neutral-500"
+                className="size-4 shrink-0 text-neutral-500 dark:text-zinc-400"
               />
             </a>
           ))}
