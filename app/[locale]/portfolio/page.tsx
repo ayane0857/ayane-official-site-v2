@@ -3,6 +3,7 @@ import { hasLocale } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import { canonicalBaseUrl } from "@/data/site";
 import type { Metadata } from "next";
 import { portfolios } from "@/data/Portfolio";
 import PortfolioCard from "@/component/portfoliocard";
@@ -17,12 +18,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   const t = await getTranslations({ locale, namespace: "Portfolio" });
-  const siteUrl = "https://ayane0857.net";
-  const localizedUrl = `${siteUrl}/portfolio`;
+  const localizedUrl = `${canonicalBaseUrl}/${locale}/portfolio`;
   const languages = Object.fromEntries(
     routing.locales.map((supportedLocale) => [
       supportedLocale,
-      `${siteUrl}/${supportedLocale}/portfolio`,
+      `${canonicalBaseUrl}/${supportedLocale}/portfolio`,
     ]),
   );
   const title = `AYANE.HOME - ${t("MetaTitle")}`;
