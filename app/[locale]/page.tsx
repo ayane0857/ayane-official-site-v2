@@ -74,9 +74,9 @@ export default function Home() {
             <h1 className="text-4xl font-bold sm:text-5xl">Ayane</h1>
             <span className="text-xl text-neutral-600 dark:text-zinc-400">Student / Engineer</span>
           </div>
-          <h3 className="whitespace-pre-line text-lg sm:text-xl">
+          <p className="whitespace-pre-line text-lg sm:text-xl">
             {t("HeroText")}
-          </h3>
+          </p>
           <div className="flex flex-col gap-4">
             <p className="text-xl text-neutral-600 dark:text-zinc-400">Tags</p>
             <div className="flex flex-wrap items-center gap-2">
